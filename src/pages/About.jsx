@@ -14,7 +14,7 @@ export const About = () => {
   ];
 
   return (
-    <div className="bg-[#0F0F10] text-gray-100 min-h-screen pt-24 pb-20">
+    <div className="bg-white text-[#C9A227] min-h-screen pt-24 pb-20">
       <SEO
         title="About Empragold Real Estate | Heritage & Leadership"
         description="Learn about Empragold Real Estate, our legacy of ultra-luxury property brokerage, core values, private client advisory, and global offices."
@@ -24,87 +24,87 @@ export const About = () => {
         <Breadcrumbs items={[{ label: 'About Us' }]} />
 
         {/* Hero Section */}
-        <div className="relative rounded-3xl overflow-hidden my-8 h-96 bg-black flex items-center justify-center p-8 text-center border border-white/10 shadow-2xl">
+        <div className="relative rounded-3xl overflow-hidden my-8 h-96 bg-white flex items-center justify-center p-8 text-center border border-[#C9A227]/30 shadow-xl">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
             alt="Empragold Estate"
-            className="absolute inset-0 w-full h-full object-cover filter brightness-50"
+            className="absolute inset-0 w-full h-full object-cover filter brightness-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F10] via-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
 
           <div className="relative z-10 max-w-3xl">
-            <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-2">
+            <span className="text-xs text-[#9A7B1C] uppercase tracking-widest font-bold block mb-2 bg-white/80 py-1 px-3 rounded-full inline-block backdrop-blur-md border border-[#C9A227]/30 shadow-sm">
               Our Legacy & Pursuit of Excellence
             </span>
-            <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white">
+            <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#C9A227] drop-shadow-sm">
               Redefining Luxury Real Estate
             </h1>
-            <p className="text-gray-300 text-sm sm:text-base mt-4 font-light">
+            <p className="text-[#9A7B1C] text-sm sm:text-base mt-4 font-semibold max-w-2xl mx-auto bg-white/70 p-2 rounded-xl backdrop-blur-sm border border-[#C9A227]/20">
               We connect global leaders, sovereign investors, and private families with trophy properties of enduring architectural and financial value.
             </p>
           </div>
         </div>
 
         {/* Company Story & Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 py-12 border-b border-white/10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 py-12 border-b border-[#C9A227]/20 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block">
               The Empragold Story
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#C9A227]">
               Crafted for Those Who Demand Distinction
             </h2>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-[#C9A227]/90 text-sm leading-relaxed">
               Founded on the principles of absolute discretion, financial rigor, and architectural connoisseurship, Empragold has evolved into a global powerhouse in luxury real estate. We represent high-net-worth clients across Lagos, Abuja, London, and Dubai.
             </p>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-[#C9A227]/80 text-sm leading-relaxed">
               Every property in our portfolio undergoes exhaustive legal title audits, structural assessments, and investment yield projections. We do not simply sell real estate; we preserve generational legacies.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="p-4 bg-[#1A1A1D] rounded-xl border border-white/10">
+              <div className="p-4 bg-slate-50 rounded-xl border border-[#C9A227]/30 shadow-sm">
                 <strong className="text-2xl font-serif font-bold text-[#C9A227] block">Our Mission</strong>
-                <span className="text-xs text-gray-400 block mt-1">To deliver uncompromised luxury real estate advisory with complete confidentiality.</span>
+                <span className="text-xs text-[#C9A227]/80 block mt-1">To deliver uncompromised luxury real estate advisory with complete confidentiality.</span>
               </div>
-              <div className="p-4 bg-[#1A1A1D] rounded-xl border border-white/10">
-                <strong className="text-2xl font-serif font-bold text-white block">Our Vision</strong>
-                <span className="text-xs text-gray-400 block mt-1">To be the trusted worldwide standard for trophy estates and high-yield commercial hubs.</span>
+              <div className="p-4 bg-slate-50 rounded-xl border border-[#C9A227]/30 shadow-sm">
+                <strong className="text-2xl font-serif font-bold text-[#9A7B1C] block">Our Vision</strong>
+                <span className="text-xs text-[#C9A227]/80 block mt-1">To be the trusted worldwide standard for trophy estates and high-yield commercial hubs.</span>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden border border-[#C9A227]/30 shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden border border-[#C9A227]/40 shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
                 alt="Empragold Interior"
                 className="w-full h-[420px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 bg-black/80 p-4 rounded-xl backdrop-blur-md border border-white/10">
+              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 bg-white/90 p-4 rounded-xl backdrop-blur-md border border-[#C9A227]/30 shadow-md">
                 <span className="text-xs font-serif font-bold text-[#C9A227] block">Lagos Flagship Office</span>
-                <span className="text-[11px] text-gray-300 block">Admiralty Way, Lekki Phase 1</span>
+                <span className="text-[11px] text-[#C9A227]/80 block">Admiralty Way, Lekki Phase 1</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Timeline */}
-        <div className="py-16 border-b border-white/10">
+        <div className="py-16 border-b border-[#C9A227]/20">
           <div className="text-center max-w-xl mx-auto mb-14">
             <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-2">
               Our Journey
             </span>
-            <h2 className="text-3xl font-serif font-bold text-white">Milestones of Growth</h2>
+            <h2 className="text-3xl font-serif font-bold text-[#C9A227]">Milestones of Growth</h2>
           </div>
 
           <div className="relative max-w-4xl mx-auto space-y-8">
             {milestones.map((m, idx) => (
-              <div key={idx} className="flex flex-col sm:flex-row items-start gap-6 bg-[#1A1A1D] p-6 rounded-2xl border border-white/10">
+              <div key={idx} className="flex flex-col sm:flex-row items-start gap-6 bg-white p-6 rounded-2xl border border-[#C9A227]/30 shadow-md">
                 <span className="text-3xl font-serif font-bold text-[#C9A227] shrink-0">{m.year}</span>
                 <div>
-                  <h3 className="text-xl font-serif font-bold text-white mb-1">{m.title}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">{m.desc}</p>
+                  <h3 className="text-xl font-serif font-bold text-[#C9A227] mb-1">{m.title}</h3>
+                  <p className="text-xs text-[#C9A227]/80 leading-relaxed">{m.desc}</p>
                 </div>
               </div>
             ))}
@@ -117,16 +117,16 @@ export const About = () => {
             <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-2">
               Leadership
             </span>
-            <h2 className="text-3xl font-serif font-bold text-white">Executive Partners</h2>
+            <h2 className="text-3xl font-serif font-bold text-[#C9A227]">Executive Partners</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {agentsData.map((agent) => (
-              <div key={agent.id} className="bg-[#1A1A1D] border border-white/10 rounded-2xl p-5 text-center">
+              <div key={agent.id} className="bg-white border border-[#C9A227]/30 rounded-2xl p-5 text-center shadow-md">
                 <img src={agent.image} alt={agent.name} className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-[#C9A227]" />
-                <h3 className="text-lg font-serif font-bold text-white">{agent.name}</h3>
-                <span className="text-xs text-[#C9A227] uppercase font-semibold block mt-1">{agent.role}</span>
-                <p className="text-xs text-gray-400 mt-3 line-clamp-3">{agent.bio}</p>
+                <h3 className="text-lg font-serif font-bold text-[#C9A227]">{agent.name}</h3>
+                <span className="text-xs text-[#9A7B1C] uppercase font-semibold block mt-1">{agent.role}</span>
+                <p className="text-xs text-[#C9A227]/80 mt-3 line-clamp-3">{agent.bio}</p>
               </div>
             ))}
           </div>

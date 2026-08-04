@@ -44,7 +44,7 @@ export const PropertyManagement = () => {
   };
 
   return (
-    <div className="bg-[#0F0F10] text-gray-100 min-h-screen pt-24 pb-20">
+    <div className="bg-white text-[#C9A227] min-h-screen pt-24 pb-20">
       <SEO
         title="Asset & Property Management Services | Empragold"
         description="Comprehensive luxury property management for owners and investors, offering 24/7 maintenance, executive tenant placement, and digital reporting."
@@ -58,56 +58,56 @@ export const PropertyManagement = () => {
           <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-2">
             Institutional Asset Protection
           </span>
-          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white">
+          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#C9A227]">
             White-Glove Property Management
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base mt-4 font-light">
+          <p className="text-[#C9A227]/80 text-sm sm:text-base mt-4 font-normal">
             Maximizing rental yield, tenant satisfaction, and capital preservation for high-end luxury portfolios worldwide.
           </p>
         </div>
 
         {/* Key Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-12">
-          <div className="bg-[#1A1A1D] p-6 rounded-2xl border border-white/10">
+          <div className="bg-white p-6 rounded-2xl border border-[#C9A227]/30 shadow-md">
             <Users className="w-8 h-8 text-[#C9A227] mb-4" />
-            <h3 className="text-lg font-serif font-bold text-white mb-2">Executive Tenant Screening</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <h3 className="text-lg font-serif font-bold text-[#C9A227] mb-2">Executive Tenant Screening</h3>
+            <p className="text-xs text-[#C9A227]/80 leading-relaxed font-normal">
               Biometric identity verification, credit background checks, and embassy reference audits for every tenant.
             </p>
           </div>
 
-          <div className="bg-[#1A1A1D] p-6 rounded-2xl border border-white/10">
+          <div className="bg-white p-6 rounded-2xl border border-[#C9A227]/30 shadow-md">
             <Wrench className="w-8 h-8 text-[#C9A227] mb-4" />
-            <h3 className="text-lg font-serif font-bold text-white mb-2">24/7 On-Demand Maintenance</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <h3 className="text-lg font-serif font-bold text-[#C9A227] mb-2">24/7 On-Demand Maintenance</h3>
+            <p className="text-xs text-[#C9A227]/80 leading-relaxed font-normal">
               Vetted artisan contractors on call 24 hours a day for emergency HVAC, plumbing, and smart home repairs.
             </p>
           </div>
 
-          <div className="bg-[#1A1A1D] p-6 rounded-2xl border border-white/10">
+          <div className="bg-white p-6 rounded-2xl border border-[#C9A227]/30 shadow-md">
             <BarChart3 className="w-8 h-8 text-[#C9A227] mb-4" />
-            <h3 className="text-lg font-serif font-bold text-white mb-2">Real-Time Landlord Portal</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <h3 className="text-lg font-serif font-bold text-[#C9A227] mb-2">Real-Time Landlord Portal</h3>
+            <p className="text-xs text-[#C9A227]/80 leading-relaxed font-normal">
               Access digital income statements, tenant ledger records, and maintenance logs anytime from any device.
             </p>
           </div>
 
-          <div className="bg-[#1A1A1D] p-6 rounded-2xl border border-white/10">
+          <div className="bg-white p-6 rounded-2xl border border-[#C9A227]/30 shadow-md">
             <ShieldCheck className="w-8 h-8 text-[#C9A227] mb-4" />
-            <h3 className="text-lg font-serif font-bold text-white mb-2">Guaranteed Rent Transfer</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <h3 className="text-lg font-serif font-bold text-[#C9A227] mb-2">Guaranteed Rent Transfer</h3>
+            <p className="text-xs text-[#C9A227]/80 leading-relaxed font-normal">
               Direct automated wire transfers deposited directly into your designated offshore or local bank account.
             </p>
           </div>
         </div>
 
         {/* Management Fee Calculator & Plans */}
-        <div className="bg-[#1A1A1D] border border-[#C9A227]/30 rounded-3xl p-8 my-16 shadow-2xl">
+        <div className="bg-white border border-[#C9A227]/30 rounded-3xl p-8 my-16 shadow-xl">
           <div className="text-center max-w-xl mx-auto mb-10">
             <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-1">
               Transparent Pricing
             </span>
-            <h2 className="text-3xl font-serif font-bold text-white">Management Plan Calculator</h2>
+            <h2 className="text-3xl font-serif font-bold text-[#C9A227]">Management Plan Calculator</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
@@ -117,24 +117,24 @@ export const PropertyManagement = () => {
                 onClick={() => setSelectedPlan(plan.id)}
                 className={`relative p-6 rounded-2xl border cursor-pointer transition-all ${
                   selectedPlan === plan.id
-                    ? 'bg-[#0F0F10] border-[#C9A227] shadow-xl'
-                    : 'bg-[#141417] border-white/10 hover:border-white/20'
+                    ? 'bg-slate-50 border-[#C9A227] shadow-xl'
+                    : 'bg-white border-[#C9A227]/20 hover:border-[#C9A227]/40'
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-3 right-4 bg-[#C9A227] text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                  <span className="absolute -top-3 right-4 bg-[#C9A227] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase shadow-sm">
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-xl font-serif font-bold text-white">{plan.name}</h3>
+                <h3 className="text-xl font-serif font-bold text-[#C9A227]">{plan.name}</h3>
                 <div className="text-3xl font-serif font-bold text-[#C9A227] my-2">{plan.rate}</div>
-                <p className="text-xs text-gray-400 mb-4">{plan.subtitle}</p>
+                <p className="text-xs text-[#C9A227]/80 mb-4 font-normal">{plan.subtitle}</p>
 
-                <div className="space-y-2 pt-4 border-t border-white/10 text-xs text-gray-300">
+                <div className="space-y-2 pt-4 border-t border-[#C9A227]/20 text-xs text-[#C9A227]">
                   {plan.features.map((f, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#C9A227] shrink-0" />
-                      <span>{f}</span>
+                      <span className="font-medium">{f}</span>
                     </div>
                   ))}
                 </div>
@@ -143,8 +143,8 @@ export const PropertyManagement = () => {
           </div>
 
           {/* Interactive Calculator Slider */}
-          <div className="bg-[#0F0F10] p-6 rounded-2xl border border-white/10 max-w-2xl mx-auto text-center space-y-4">
-            <div className="flex justify-between items-center text-xs text-gray-300 font-medium">
+          <div className="bg-slate-50 p-6 rounded-2xl border border-[#C9A227]/30 max-w-2xl mx-auto text-center space-y-4">
+            <div className="flex justify-between items-center text-xs text-[#C9A227] font-semibold">
               <span>Estimated Monthly Rental Income</span>
               <strong className="text-[#C9A227] text-base font-bold">${monthlyRentInput.toLocaleString()} / mo</strong>
             </div>
@@ -155,16 +155,16 @@ export const PropertyManagement = () => {
               step="1000"
               value={monthlyRentInput}
               onChange={(e) => setMonthlyRentInput(Number(e.target.value))}
-              className="w-full h-2 bg-gray-800 accent-[#C9A227] rounded-lg cursor-pointer"
+              className="w-full h-2 bg-slate-200 accent-[#C9A227] rounded-lg cursor-pointer"
             />
 
-            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-left">
+            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#C9A227]/20 text-left">
               <div>
-                <span className="text-[11px] text-gray-400 uppercase font-medium block">Monthly Management Fee</span>
-                <strong className="text-xl font-serif font-bold text-white">${estimatedManagementFee.toLocaleString()}</strong>
+                <span className="text-[11px] text-[#C9A227]/70 uppercase font-semibold block">Monthly Management Fee</span>
+                <strong className="text-xl font-serif font-bold text-[#C9A227]">${estimatedManagementFee.toLocaleString()}</strong>
               </div>
               <div>
-                <span className="text-[11px] text-gray-400 uppercase font-medium block">Your Net Monthly Income</span>
+                <span className="text-[11px] text-[#C9A227]/70 uppercase font-semibold block">Your Net Monthly Income</span>
                 <strong className="text-xl font-serif font-bold text-[#C9A227]">${netOwnerIncome.toLocaleString()}</strong>
               </div>
             </div>
@@ -172,32 +172,32 @@ export const PropertyManagement = () => {
         </div>
 
         {/* Onboarding Form */}
-        <div className="max-w-xl mx-auto bg-[#1A1A1D] border border-white/10 p-8 rounded-2xl">
-          <h3 className="text-2xl font-serif font-bold text-white mb-2 text-center">Enroll Your Property</h3>
-          <p className="text-xs text-gray-400 mb-6 text-center">Submit property details to receive a complimentary valuation audit.</p>
+        <div className="max-w-xl mx-auto bg-white border border-[#C9A227]/30 p-8 rounded-2xl shadow-lg">
+          <h3 className="text-2xl font-serif font-bold text-[#C9A227] mb-2 text-center">Enroll Your Property</h3>
+          <p className="text-xs text-[#C9A227]/80 mb-6 text-center">Submit property details to receive a complimentary valuation audit.</p>
 
           <form onSubmit={handleFormSubmit} className="space-y-4 text-xs">
             <input
               type="text"
               required
               placeholder="Owner Name *"
-              className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-white focus:outline-none focus:border-[#C9A227]"
+              className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-[#C9A227] placeholder-[#C9A227]/50 focus:outline-none focus:border-[#C9A227]"
             />
             <input
               type="email"
               required
               placeholder="Email Address *"
-              className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-white focus:outline-none focus:border-[#C9A227]"
+              className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-[#C9A227] placeholder-[#C9A227]/50 focus:outline-none focus:border-[#C9A227]"
             />
             <input
               type="text"
               required
               placeholder="Property Address / Location *"
-              className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-white focus:outline-none focus:border-[#C9A227]"
+              className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-[#C9A227] placeholder-[#C9A227]/50 focus:outline-none focus:border-[#C9A227]"
             />
             <button
               type="submit"
-              className="w-full bg-[#C9A227] text-black font-semibold uppercase tracking-wider py-3.5 rounded-xl hover:bg-[#D4AF37] transition-all"
+              className="w-full bg-[#C9A227] text-white font-semibold uppercase tracking-wider py-3.5 rounded-xl hover:bg-[#B8860B] transition-all shadow-md"
             >
               Submit Property Audit Request
             </button>

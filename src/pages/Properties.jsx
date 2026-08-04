@@ -114,7 +114,7 @@ export const Properties = () => {
   }, [filteredProperties, currentPage]);
 
   return (
-    <div className="bg-[#0F0F10] text-gray-100 min-h-screen pt-24 pb-20">
+    <div className="bg-white text-[#C9A227] min-h-screen pt-24 pb-20">
       <SEO
         title="Luxury Real Estate Portfolio | Empragold"
         description="Browse ultra-luxury penthouses, waterfront mansions, commercial towers, and prime investment land available across global financial destinations."
@@ -128,10 +128,10 @@ export const Properties = () => {
           <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-1">
             Exclusive Listings
           </span>
-          <h1 className="text-3xl sm:text-5xl font-serif font-bold text-white">
+          <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#C9A227]">
             {filters.savedOnly ? 'Your Saved Properties' : 'Luxury Property Portfolio'}
           </h1>
-          <p className="text-gray-400 text-sm mt-2 max-w-2xl">
+          <p className="text-[#C9A227]/80 text-sm mt-2 max-w-2xl font-normal">
             {filters.savedOnly
               ? 'View your curated shortlist of saved luxury residences and estates.'
               : 'Explore vetted trophy homes, architectural marvels, and prime development sites with verified titles.'}
@@ -147,14 +147,14 @@ export const Properties = () => {
         />
 
         {/* View Layout Switcher & Quick Tabs */}
-        <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
+        <div className="flex justify-between items-center mb-6 pb-4 border-b border-[#C9A227]/20">
           <div className="flex gap-2">
             <button
               onClick={() => setFilters((prev) => ({ ...prev, savedOnly: false }))}
               className={`text-xs font-semibold px-4 py-2 rounded-lg transition-all ${
                 !filters.savedOnly
-                  ? 'bg-[#C9A227] text-black'
-                  : 'bg-[#1A1A1D] text-gray-400 hover:text-white border border-white/10'
+                  ? 'bg-[#C9A227] text-white'
+                  : 'bg-slate-50 text-[#C9A227] hover:bg-slate-100 border border-[#C9A227]/30'
               }`}
             >
               All Portfolio
@@ -163,19 +163,19 @@ export const Properties = () => {
               onClick={() => setFilters((prev) => ({ ...prev, savedOnly: true }))}
               className={`text-xs font-semibold px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
                 filters.savedOnly
-                  ? 'bg-[#C9A227] text-black'
-                  : 'bg-[#1A1A1D] text-gray-400 hover:text-white border border-white/10'
+                  ? 'bg-[#C9A227] text-white'
+                  : 'bg-slate-50 text-[#C9A227] hover:bg-slate-100 border border-[#C9A227]/30'
               }`}
             >
               <Heart className="w-3.5 h-3.5" /> Saved Favorites ({wishlist.length})
             </button>
           </div>
 
-          <div className="flex items-center gap-2 bg-[#1A1A1D] border border-white/10 rounded-lg p-1">
+          <div className="flex items-center gap-2 bg-slate-50 border border-[#C9A227]/30 rounded-lg p-1">
             <button
               onClick={() => setLayout('grid')}
               className={`p-1.5 rounded-md transition-colors ${
-                layout === 'grid' ? 'bg-[#C9A227] text-black' : 'text-gray-400 hover:text-white'
+                layout === 'grid' ? 'bg-[#C9A227] text-white' : 'text-[#C9A227]/70 hover:text-[#C9A227]'
               }`}
               title="Grid View"
             >
@@ -184,7 +184,7 @@ export const Properties = () => {
             <button
               onClick={() => setLayout('list')}
               className={`p-1.5 rounded-md transition-colors ${
-                layout === 'list' ? 'bg-[#C9A227] text-black' : 'text-gray-400 hover:text-white'
+                layout === 'list' ? 'bg-[#C9A227] text-white' : 'text-[#C9A227]/70 hover:text-[#C9A227]'
               }`}
               title="List View"
             >
@@ -207,17 +207,17 @@ export const Properties = () => {
             ))}
           </div>
         ) : (
-          <div className="bg-[#1A1A1D] border border-white/10 rounded-2xl p-12 text-center my-10 max-w-lg mx-auto">
+          <div className="bg-white border border-[#C9A227]/30 shadow-md rounded-2xl p-12 text-center my-10 max-w-lg mx-auto">
             <SlidersHorizontal className="w-12 h-12 text-[#C9A227] mx-auto mb-4 opacity-70" />
-            <h3 className="text-xl font-serif font-bold text-white mb-2">No Matching Properties</h3>
-            <p className="text-xs text-gray-400 mb-6">
+            <h3 className="text-xl font-serif font-bold text-[#C9A227] mb-2">No Matching Properties</h3>
+            <p className="text-xs text-[#C9A227]/80 mb-6">
               {filters.savedOnly
                 ? 'You have not saved any properties to your wishlist yet.'
                 : 'No luxury properties match your current search filters. Try resetting your price or location criteria.'}
             </p>
             <button
               onClick={resetFilters}
-              className="bg-[#C9A227] text-black font-semibold text-xs uppercase tracking-wider px-6 py-3 rounded-xl hover:bg-[#D4AF37] transition-all"
+              className="bg-[#C9A227] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3 rounded-xl hover:bg-[#B8860B] transition-all shadow-md"
             >
               Reset All Filters
             </button>
@@ -230,7 +230,7 @@ export const Properties = () => {
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="px-4 py-2 bg-[#1A1A1D] border border-white/10 text-gray-300 disabled:opacity-40 rounded-lg text-xs font-semibold hover:border-[#C9A227]"
+              className="px-4 py-2 bg-slate-50 border border-[#C9A227]/30 text-[#C9A227] disabled:opacity-40 rounded-lg text-xs font-semibold hover:border-[#C9A227]"
             >
               Previous
             </button>
@@ -241,8 +241,8 @@ export const Properties = () => {
                 onClick={() => setCurrentPage(idx + 1)}
                 className={`w-9 h-9 rounded-lg text-xs font-bold transition-all ${
                   currentPage === idx + 1
-                    ? 'bg-[#C9A227] text-black'
-                    : 'bg-[#1A1A1D] border border-white/10 text-gray-400 hover:text-white'
+                    ? 'bg-[#C9A227] text-white'
+                    : 'bg-slate-50 border border-[#C9A227]/30 text-[#C9A227] hover:bg-slate-100'
                 }`}
               >
                 {idx + 1}
@@ -252,7 +252,7 @@ export const Properties = () => {
             <button
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-[#1A1A1D] border border-white/10 text-gray-300 disabled:opacity-40 rounded-lg text-xs font-semibold hover:border-[#C9A227]"
+              className="px-4 py-2 bg-slate-50 border border-[#C9A227]/30 text-[#C9A227] disabled:opacity-40 rounded-lg text-xs font-semibold hover:border-[#C9A227]"
             >
               Next
             </button>

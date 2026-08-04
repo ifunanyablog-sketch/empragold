@@ -19,7 +19,7 @@ export const Services = () => {
   };
 
   return (
-    <div className="bg-[#0F0F10] text-gray-100 min-h-screen pt-24 pb-20">
+    <div className="bg-white text-[#C9A227] min-h-screen pt-24 pb-20">
       <SEO
         title="Bespoke Real Estate Services | Empragold"
         description="Empragold offers residential trophy sales, Grade-A commercial acquisitions, property asset management, investment advisory, and land site audits."
@@ -33,10 +33,10 @@ export const Services = () => {
           <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-2">
             Bespoke Real Estate Capabilities
           </span>
-          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white">
+          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#C9A227]">
             Tailored Private Services
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base mt-4 font-light">
+          <p className="text-[#C9A227]/80 text-sm sm:text-base mt-4 font-normal">
             Providing UHNW individuals, corporate institutions, and international investors with end-to-end real estate expertise.
           </p>
         </div>
@@ -47,23 +47,23 @@ export const Services = () => {
             <div
               key={service.id}
               id={service.id}
-              className={`bg-[#1A1A1D] border border-white/10 rounded-2xl p-8 sm:p-10 shadow-2xl flex flex-col ${
+              className={`bg-white border border-[#C9A227]/30 rounded-2xl p-8 sm:p-10 shadow-xl flex flex-col ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'
               } gap-10 items-center scroll-mt-28`}
             >
               <div className="flex-1 space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-[#C9A227]/10 border border-[#C9A227] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 border border-[#C9A227] flex items-center justify-center shadow-sm">
                   {getServiceIcon(service.icon)}
                 </div>
-                <span className="text-xs text-[#C9A227] uppercase tracking-wider font-semibold block">
+                <span className="text-xs text-[#9A7B1C] uppercase tracking-wider font-bold block">
                   {service.subtitle}
                 </span>
-                <h2 className="text-3xl font-serif font-bold text-white">{service.title}</h2>
-                <p className="text-gray-300 text-sm leading-relaxed">{service.fullDesc}</p>
+                <h2 className="text-3xl font-serif font-bold text-[#C9A227]">{service.title}</h2>
+                <p className="text-[#C9A227]/90 text-sm leading-relaxed font-normal">{service.fullDesc}</p>
 
                 <div className="space-y-2.5 pt-4">
                   {service.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-center gap-2.5 text-xs text-gray-200">
+                    <div key={idx} className="flex items-center gap-2.5 text-xs text-[#C9A227] font-medium">
                       <CheckCircle2 className="w-4 h-4 text-[#C9A227] shrink-0" />
                       <span>{feat}</span>
                     </div>
@@ -73,14 +73,14 @@ export const Services = () => {
                 <div className="pt-6">
                   <Link
                     to="/contact"
-                    className="inline-flex bg-[#C9A227] text-black hover:bg-[#D4AF37] text-xs font-semibold uppercase tracking-wider px-6 py-3 rounded-xl transition-all items-center gap-2"
+                    className="inline-flex bg-[#C9A227] text-white hover:bg-[#B8860B] text-xs font-semibold uppercase tracking-wider px-6 py-3 rounded-xl transition-all items-center gap-2 shadow-md"
                   >
                     Request Private Consultation <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
 
-              <div className="w-full lg:w-1/2 h-80 rounded-2xl overflow-hidden border border-white/10 shrink-0">
+              <div className="w-full lg:w-1/2 h-80 rounded-2xl overflow-hidden border border-[#C9A227]/30 shrink-0 shadow-md">
                 <img
                   src={`https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80`}
                   alt={service.title}

@@ -2,79 +2,116 @@
 
 @layer base {
   :root {
-    --purple-accent: #a855f7;
-    --purple-glow: #d946ef;
-    --violet-dark: #0c0a15;
-    --plum-slate: #161224;
-    --plum-card: rgba(25, 20, 40, 0.75);
-    --gold: #C9A227;
+    --gold: #D4AF37;
+    --gold-dark: #C58B00;
+    --gold-light: #FFDF00;
+    --logo-blue: #0052D4;
+    --logo-blue-vibrant: #0075FF;
+    --logo-blue-dark: #003399;
   }
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    background-color: #0b0914;
-    color: #f3f4f6;
+    background-color: #ffffff;
+    color: #003399;
     overflow-x: hidden;
   }
 
-  h1, h2, h3 {
-    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    color: #003399;
   }
 }
 
-/* Custom Utilities for Twilight Ultra-Luxury UI */
+/* Override all black/dark font classes with the Logo's signature Royal Blue */
+.text-slate-900,
+.text-slate-800,
+.text-gray-900,
+.text-black,
+.text-\[\#0f172a\],
+.text-slate-950 {
+  color: #003399 !important;
+}
+
+.text-slate-700,
+.text-gray-800,
+.text-gray-700 {
+  color: #0047AB !important;
+}
+
+/* Custom Metallic Gold Utilities - Vibrant 24K Pure Gold */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #FFDF00 25%, #E5A900 60%, #C58B00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 1px 2px rgba(197, 139, 0, 0.25));
+}
+
+.text-gold-metallic {
+  color: #D4AF37;
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.2);
+}
+
+.text-gold-dark {
+  color: #C58B00;
+}
+
+.text-gold-light {
+  color: #E5A900;
+}
+
+/* Custom Utilities for Luxury White & Gold UI */
 .font-condensed {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   letter-spacing: -0.04em;
 }
 
 .bg-twilight {
-  background: radial-gradient(circle at 50% 20%, #201438 0%, #0c0914 70%);
+  background: #ffffff;
 }
 
 .text-violet-glow {
-  color: #e9d5ff;
-  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  color: #C9A227;
+  text-shadow: 0 0 10px rgba(201, 162, 39, 0.3);
 }
 
 .purple-gradient-bg {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.8) 0%, rgba(217, 70, 239, 0.6) 50%, rgba(124, 58, 237, 0.9) 100%);
+  background: #ffffff;
 }
 
 .glass-panel-purple {
-  background: rgba(22, 17, 36, 0.65);
+  background: #ffffff;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(168, 85, 247, 0.25);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  box-shadow: 0 10px 30px rgba(201, 162, 39, 0.1);
 }
 
 .glass-panel-glow {
-  background: rgba(26, 20, 44, 0.75);
+  background: #ffffff;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(217, 70, 239, 0.35);
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  box-shadow: 0 0 25px rgba(201, 162, 39, 0.2);
 }
 
 .pin-line {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(168, 85, 247, 0.8));
+  background: linear-gradient(90deg, rgba(201, 162, 39, 0.2), rgba(201, 162, 39, 0.8));
 }
 
 .pulse-dot {
-  box-shadow: 0 0 0 0 rgba(217, 70, 239, 0.7);
+  box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.7);
   animation: pulse-ring 2s infinite;
 }
 
 @keyframes pulse-ring {
   0% {
-    box-shadow: 0 0 0 0 rgba(217, 70, 239, 0.7);
+    box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(217, 70, 239, 0);
+    box-shadow: 0 0 0 12px rgba(201, 162, 39, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(217, 70, 239, 0);
+    box-shadow: 0 0 0 0 rgba(201, 162, 39, 0);
   }
 }
 
@@ -85,16 +122,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0914;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #231c38;
+  background: #e5c158;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a855f7;
+  background: #C9A227;
 }
 
 /* Hide scrollbar for clean horizontal swipe lists */

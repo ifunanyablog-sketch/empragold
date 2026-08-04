@@ -43,7 +43,7 @@ export default function App() {
       <AppProvider>
         <Router>
           <ScrollToTop />
-          <div className="flex flex-col min-h-screen bg-[#0F0F10] font-sans antialiased text-gray-100 selection:bg-[#C9A227] selection:text-black">
+          <div className="flex flex-col min-h-screen bg-white font-sans antialiased text-[#C9A227] selection:bg-[#C9A227] selection:text-white">
             <Navbar />
             <main className="flex-grow">
               <Routes>

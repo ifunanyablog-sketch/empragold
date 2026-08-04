@@ -29,7 +29,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="bg-[#0F0F10] text-gray-100 min-h-screen pt-24 pb-20">
+    <div className="bg-white text-[#C9A227] min-h-screen pt-24 pb-20">
       <SEO
         title="Contact Empragold Concierge | Private Real Estate Advisory"
         description="Connect with Empragold Real Estate private client advisors in Lagos, Abuja, London, and Dubai. Schedule confidential consultations."
@@ -43,10 +43,10 @@ export const Contact = () => {
           <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-2">
             Discreet Communication
           </span>
-          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white">
+          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#C9A227]">
             Connect with Empragold
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base mt-4 font-light">
+          <p className="text-[#C9A227]/80 text-sm sm:text-base mt-4 font-normal">
             Whether seeking off-market penthouse opportunities or institutional asset management, our senior partners respond within two hours.
           </p>
         </div>
@@ -54,12 +54,12 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 my-12">
           {/* Left Side Office Cards */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#1A1A1D] border border-[#C9A227]/30 rounded-2xl p-6 shadow-2xl">
+            <div className="bg-white border border-[#C9A227]/30 rounded-2xl p-6 shadow-xl">
               <span className="text-xs text-[#C9A227] uppercase tracking-widest font-bold block mb-1">
                 West Africa Flagship
               </span>
-              <h3 className="text-xl font-serif font-bold text-white mb-3">Lagos Headquarters</h3>
-              <p className="text-xs text-gray-300 flex items-start gap-2 mb-2">
+              <h3 className="text-xl font-serif font-bold text-[#C9A227] mb-3">Lagos Headquarters</h3>
+              <p className="text-xs text-[#C9A227]/90 flex items-start gap-2 mb-2 font-medium">
                 <MapPin className="w-4 h-4 text-[#C9A227] shrink-0 mt-0.5" />
                 Plot 14 Admiralty Way, Lekki Phase 1, Lagos, Nigeria
               </p>
@@ -67,26 +67,26 @@ export const Contact = () => {
                 href="https://wa.me/2348156789757"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-gray-300 flex items-center gap-2 mb-2 hover:text-[#25D366] transition-colors"
+                className="text-xs text-[#C9A227]/90 flex items-center gap-2 mb-2 hover:text-[#25D366] transition-colors font-medium"
               >
                 <Phone className="w-4 h-4 text-[#25D366]" />
                 +234 815 678 9757 (WhatsApp)
               </a>
-              <p className="text-xs text-gray-300 flex items-center gap-2">
+              <p className="text-xs text-[#C9A227]/90 flex items-center gap-2 font-medium">
                 <Mail className="w-4 h-4 text-[#C9A227]" />
                 lagos@empragold.com
               </p>
             </div>
 
-            <div className="bg-[#1A1A1D] border border-white/10 p-6 rounded-2xl space-y-3">
-              <div className="flex items-center gap-3 text-xs text-gray-300">
+            <div className="bg-white border border-[#C9A227]/30 p-6 rounded-2xl space-y-3 shadow-md">
+              <div className="flex items-center gap-3 text-xs text-[#C9A227]">
                 <Clock className="w-4 h-4 text-[#C9A227]" />
                 <div>
-                  <strong className="text-white block font-serif">Executive Business Hours</strong>
-                  <span>Mon - Sat: 08:00 AM - 08:00 PM (WAT)</span>
+                  <strong className="text-[#C9A227] block font-serif font-bold">Executive Business Hours</strong>
+                  <span className="text-[#C9A227]/80">Mon - Sat: 08:00 AM - 08:00 PM (WAT)</span>
                 </div>
               </div>
-              <div className="flex items-center gap-3 text-xs text-gray-300 pt-2 border-t border-white/10">
+              <div className="flex items-center gap-3 text-xs text-[#C9A227]/90 pt-2 border-t border-[#C9A227]/20 font-medium">
                 <ShieldCheck className="w-4 h-4 text-[#C9A227]" />
                 <span>24/7 VIP Emergency Concierge active for existing owners</span>
               </div>
@@ -94,22 +94,22 @@ export const Contact = () => {
           </div>
 
           {/* Right Side Form */}
-          <div className="lg:col-span-7 bg-[#1A1A1D] border border-white/10 rounded-2xl p-8 sm:p-10 shadow-2xl">
-            <h3 className="text-2xl font-serif font-bold text-white mb-2">Send Executive Inquiry</h3>
-            <p className="text-xs text-gray-400 mb-6">Fill in your requirements below. Your communication remains strictly confidential.</p>
+          <div className="lg:col-span-7 bg-white border border-[#C9A227]/30 rounded-2xl p-8 sm:p-10 shadow-xl">
+            <h3 className="text-2xl font-serif font-bold text-[#C9A227] mb-2">Send Executive Inquiry</h3>
+            <p className="text-xs text-[#C9A227]/80 mb-6 font-normal">Fill in your requirements below. Your communication remains strictly confidential.</p>
 
             {submitted ? (
               <div className="py-12 text-center">
-                <div className="w-16 h-16 bg-[#C9A227]/20 border border-[#C9A227] text-[#C9A227] rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-amber-50 border border-[#C9A227] text-[#C9A227] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h4 className="text-2xl font-serif font-bold text-white mb-2">Inquiry Received</h4>
-                <p className="text-xs text-gray-300 max-w-sm mx-auto mb-6">
+                <h4 className="text-2xl font-serif font-bold text-[#C9A227] mb-2">Inquiry Received</h4>
+                <p className="text-xs text-[#C9A227]/80 max-w-sm mx-auto mb-6">
                   Thank you, <strong className="text-[#C9A227]">{formData.name}</strong>. A Senior Private Advisor will contact you within 2 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="bg-[#C9A227] text-black font-semibold text-xs uppercase tracking-wider px-6 py-3 rounded-xl"
+                  className="bg-[#C9A227] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:bg-[#B8860B] transition-all"
                 >
                   Send Another Message
                 </button>
@@ -117,48 +117,48 @@ export const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="text-xs text-gray-300 font-medium block mb-1">Full Name *</label>
+                  <label className="text-xs text-[#C9A227] font-bold block mb-1">Full Name *</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Lord Sterling"
-                    className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-[#C9A227]"
+                    className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-xs text-[#C9A227] placeholder-[#C9A227]/50 focus:outline-none focus:border-[#C9A227] shadow-sm"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs text-gray-300 font-medium block mb-1">Email Address *</label>
+                    <label className="text-xs text-[#C9A227] font-bold block mb-1">Email Address *</label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="client@domain.com"
-                      className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-[#C9A227]"
+                      className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-xs text-[#C9A227] placeholder-[#C9A227]/50 focus:outline-none focus:border-[#C9A227] shadow-sm"
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-gray-300 font-medium block mb-1">Phone Number *</label>
+                    <label className="text-xs text-[#C9A227] font-bold block mb-1">Phone Number *</label>
                     <input
                       type="tel"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+234 800 000 0000"
-                      className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-[#C9A227]"
+                      className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-xs text-[#C9A227] placeholder-[#C9A227]/50 focus:outline-none focus:border-[#C9A227] shadow-sm"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs text-gray-300 font-medium block mb-1">Primary Interest</label>
+                  <label className="text-xs text-[#C9A227] font-bold block mb-1">Primary Interest</label>
                   <select
                     value={formData.interest}
                     onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                    className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-[#C9A227]"
+                    className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-xs text-[#C9A227] focus:outline-none focus:border-[#C9A227] shadow-sm"
                   >
                     <option value="Buying Luxury Residence">Buying Luxury Residence</option>
                     <option value="Off-Market Penthouse Inquiry">Off-Market Penthouse Inquiry</option>
@@ -169,24 +169,24 @@ export const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="text-xs text-gray-300 font-medium block mb-1">Message / Requirements *</label>
+                  <label className="text-xs text-[#C9A227] font-bold block mb-1">Message / Requirements *</label>
                   <textarea
                     rows={4}
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your property requirements, location preferences, or target yield..."
-                    className="w-full bg-[#0F0F10] border border-white/10 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-[#C9A227]"
+                    className="w-full bg-slate-50 border border-[#C9A227]/30 rounded-xl p-3 text-xs text-[#C9A227] focus:outline-none focus:border-[#C9A227] shadow-sm"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#C9A227] text-black hover:bg-[#D4AF37] font-semibold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-[#C9A227] text-white hover:bg-[#B8860B] font-semibold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-md"
                 >
                   {loading ? (
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   ) : (
                     <>
                       <Send className="w-4 h-4" /> Transmit Inquiry

@@ -46,7 +46,7 @@ export const FloatingContact = () => {
           onClick={scrollToTop}
           whileHover={{ scale: 1.15 }}
           whileTap={{ scale: 0.9 }}
-          className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-black/80 border border-white/20 text-gray-300 hover:text-white hover:border-amber-400 rounded-full shadow-lg transition-colors"
+          className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-white border border-[#C9A227]/40 text-[#C9A227] hover:bg-[#C9A227] hover:text-white rounded-full shadow-lg transition-colors"
           title="Scroll to Top"
         >
           <ArrowUp className="w-4 h-4" />
