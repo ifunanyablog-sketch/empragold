@@ -151,26 +151,26 @@ export const Home = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="absolute bottom-28 sm:bottom-32 left-6 sm:left-12 lg:left-20 z-30 max-w-[280px] sm:max-w-xs"
+          className="absolute bottom-36 sm:bottom-32 left-4 sm:left-12 lg:left-20 z-30 max-w-[240px] xs:max-w-[280px] sm:max-w-xs scale-90 xs:scale-100 origin-bottom-left"
         >
-          <div className="glass-panel-purple rounded-2xl p-4 sm:p-5 text-left border border-purple-500/30 relative overflow-hidden group hover:border-purple-400/60 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
-            <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight leading-snug mb-3">
+          <div className="glass-panel-purple rounded-2xl p-3.5 sm:p-5 text-left border border-purple-500/30 relative overflow-hidden group hover:border-purple-400/60 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+            <h3 className="text-sm sm:text-lg font-semibold text-white tracking-tight leading-snug mb-2 sm:mb-3">
               Cutting edge<br />tech inside
             </h3>
 
             {/* Smart Speaker Illustration Card */}
-            <div className="relative w-full h-36 sm:h-40 rounded-xl bg-gradient-to-b from-[#1c1533] to-[#120d24] flex flex-col items-center justify-center border border-purple-500/20 overflow-hidden my-2">
+            <div className="relative w-full h-28 sm:h-40 rounded-xl bg-gradient-to-b from-[#1c1533] to-[#120d24] flex flex-col items-center justify-center border border-purple-500/20 overflow-hidden my-1.5 sm:my-2">
               {/* Glowing Magenta LED Ring */}
-              <div className="relative w-24 h-28 flex items-center justify-center">
+              <div className="relative w-20 sm:w-24 h-24 sm:h-28 flex items-center justify-center">
                 {/* Speaker Cylinder */}
-                <div className="w-16 h-24 bg-gradient-to-b from-[#2d224d] via-[#1e1738] to-[#130d29] rounded-2xl border border-purple-400/30 flex flex-col items-center justify-between p-2 shadow-inner">
-                  <div className="w-12 h-1.5 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-400 to-purple-500 shadow-[0_0_10px_#d946ef]" />
+                <div className="w-14 sm:w-16 h-20 sm:h-24 bg-gradient-to-b from-[#2d224d] via-[#1e1738] to-[#130d29] rounded-2xl border border-purple-400/30 flex flex-col items-center justify-between p-1.5 sm:p-2 shadow-inner">
+                  <div className="w-10 sm:w-12 h-1.5 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-400 to-purple-500 shadow-[0_0_10px_#d946ef]" />
                   <div className="w-full flex justify-center space-x-0.5 opacity-60">
                     <div className="w-1 h-3 bg-purple-400 rounded-full animate-pulse" />
                     <div className="w-1 h-5 bg-pink-400 rounded-full animate-pulse delay-100" />
                     <div className="w-1 h-4 bg-purple-400 rounded-full animate-pulse delay-200" />
                   </div>
-                  <div className="text-[9px] text-purple-200 font-mono tracking-widest text-center border-t border-purple-500/20 pt-1 w-full">
+                  <div className="text-[8px] sm:text-[9px] text-purple-200 font-mono tracking-widest text-center border-t border-purple-500/20 pt-1 w-full">
                     - 300 lm -
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export const Home = () => {
             {/* Link */}
             <button
               onClick={() => setActiveTechModal(true)}
-              className="mt-2 text-xs text-purple-200 hover:text-white font-medium flex items-center gap-1 group-hover:translate-x-1 transition-all"
+              className="mt-1.5 sm:mt-2 text-xs text-purple-200 hover:text-white font-medium flex items-center gap-1 group-hover:translate-x-1 transition-all"
             >
               Check it now <ArrowUpRight className="w-3.5 h-3.5 text-purple-400" />
             </button>
@@ -194,25 +194,25 @@ export const Home = () => {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute top-[36%] sm:top-[38%] right-6 sm:right-12 lg:right-20 z-30 w-64 sm:w-80"
+          className="absolute top-[32%] sm:top-[38%] right-4 sm:right-12 lg:right-20 z-30 w-56 sm:w-80 scale-90 xs:scale-100 origin-top-right"
         >
-          <div className="glass-panel-purple rounded-2xl p-4 sm:p-5 text-left border border-purple-500/30 relative overflow-hidden group hover:border-purple-400/60 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight leading-tight">
+          <div className="glass-panel-purple rounded-2xl p-3.5 sm:p-5 text-left border border-purple-500/30 relative overflow-hidden group hover:border-purple-400/60 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+            <div className="flex items-center justify-between mb-2 sm:mb-3">
+              <h3 className="text-sm sm:text-lg font-semibold text-white tracking-tight leading-tight">
                 Step into<br />comfort
               </h3>
               <button 
                 onClick={() => setActiveComfortModal(true)}
-                className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
               >
-                <Play className="w-3.5 h-3.5 fill-current ml-0.5 text-purple-950" />
+                <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current ml-0.5 text-purple-950" />
               </button>
             </div>
 
             {/* Sleek Purple Bedroom Image */}
             <div 
               onClick={() => setActiveComfortModal(true)}
-              className="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden cursor-pointer group/img border border-purple-500/20"
+              className="relative w-full h-28 sm:h-44 rounded-xl overflow-hidden cursor-pointer group/img border border-purple-500/20"
             >
               <img
                 src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80"
@@ -236,35 +236,35 @@ export const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/properties')}
-              className="absolute px-7 py-2.5 rounded-lg border border-purple-400/50 bg-gradient-to-r from-purple-900/90 via-fuchsia-900/80 to-purple-950/90 text-white font-medium text-sm shadow-[0_0_25px_rgba(168,85,247,0.5)] backdrop-blur-md flex items-center gap-2 hover:border-purple-300 transition-all cursor-pointer"
+              className="absolute px-5 sm:px-7 py-2 sm:py-2.5 rounded-lg border border-purple-400/50 bg-gradient-to-r from-purple-900/90 via-fuchsia-900/80 to-purple-950/90 text-white font-medium text-xs sm:text-sm shadow-[0_0_25px_rgba(168,85,247,0.5)] backdrop-blur-md flex items-center gap-1.5 sm:gap-2 hover:border-purple-300 transition-all cursor-pointer z-30"
             >
               <span>Explore</span>
-              <ArrowUpRight className="w-4 h-4 text-purple-300" />
+              <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-300" />
             </motion.button>
           </div>
         </div>
 
         {/* --- Bottom Row Footer Elements (Left Sponsors, Right Text & Globe Icon) --- */}
-        <div className="absolute bottom-4 sm:bottom-6 left-6 sm:left-12 lg:left-20 right-6 sm:right-12 lg:right-20 z-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-gray-400/80">
+        <div className="absolute bottom-3 sm:bottom-6 left-4 sm:left-12 lg:left-20 right-4 sm:right-12 lg:right-20 z-20 flex flex-row items-center justify-between gap-2 text-xs text-gray-400/80">
           
           {/* Bottom Left: Sponsored by */}
-          <div className="flex items-center gap-4">
-            <span className="text-[11px] font-medium text-gray-400 uppercase tracking-wider">Sponsored by</span>
-            <div className="flex items-center gap-3 text-gray-300/80">
-              <Aperture className="w-4 h-4 hover:text-white transition-colors" />
-              <Hexagon className="w-4 h-4 hover:text-white transition-colors" />
-              <Shield className="w-4 h-4 hover:text-white transition-colors" />
-              <Activity className="w-4 h-4 hover:text-white transition-colors" />
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+            <span className="text-[10px] sm:text-[11px] font-medium text-gray-400 uppercase tracking-wider">Sponsored by</span>
+            <div className="flex items-center gap-2 sm:gap-3 text-gray-300/80">
+              <Aperture className="w-3.5 h-3.5 sm:w-4 sm:h-4 hover:text-white transition-colors" />
+              <Hexagon className="w-3.5 h-3.5 sm:w-4 sm:h-4 hover:text-white transition-colors" />
+              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 hover:text-white transition-colors" />
+              <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4 hover:text-white transition-colors" />
             </div>
           </div>
 
           {/* Bottom Right: Text & Globe Icon */}
-          <div className="flex items-center gap-3 max-w-md text-right sm:text-right">
-            <p className="text-[11px] text-gray-300/75 leading-tight font-normal">
+          <div className="flex items-center gap-2 sm:gap-3 max-w-md text-right">
+            <p className="hidden md:block text-[11px] text-gray-300/75 leading-tight font-normal">
               Fill out your application once, send it anytime, and get replies.
             </p>
-            <div className="w-7 h-7 rounded-full border border-gray-400/30 flex items-center justify-center shrink-0 text-gray-300">
-              <Globe className="w-4 h-4" />
+            <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-gray-400/30 flex items-center justify-center shrink-0 text-gray-300">
+              <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
           </div>
         </div>
