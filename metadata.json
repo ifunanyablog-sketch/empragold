@@ -1,0 +1,6 @@
+{
+  "name": "Empragold Real Estate",
+  "description": "Ultra-premium luxury real estate platform featuring world-class properties, investment advisory, commercial estates, interactive property search, mortgage calculations, and agent consultations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
