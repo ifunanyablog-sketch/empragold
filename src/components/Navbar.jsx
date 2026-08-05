@@ -65,11 +65,9 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo with faint background at low opacity */}
-          <Link to="/" className="group transition-transform hover:scale-[1.02]">
-            <div className="bg-white/40 backdrop-blur-md px-3.5 py-1.5 rounded-2xl border border-white/50 shadow-sm transition-all duration-300 group-hover:bg-white/65">
-              <Logo layout="compact" />
-            </div>
+          {/* Logo */}
+          <Link to="/" className="group hover:opacity-95 transition-opacity">
+            <Logo layout="compact" />
           </Link>
 
           {/* Reduced Desktop Navigation Links matching Reference: Landlord, Agent, Renter, Pricing */}
