@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export const PropertyMedia = ({
   src,
@@ -6,11 +6,22 @@ export const PropertyMedia = ({
   className = '',
   loading = 'lazy',
   controls = true,
-  autoPlay = false,
+  autoPlay = true,
   muted = true,
   loop = true,
 }) => {
   const [videoError, setVideoError] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (autoPlay && videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = muted;
+      videoRef.current.play().catch((err) => {
+        // Autoplay may be deferred by browser policy if unmuted
+      });
+    }
+  }, [src, autoPlay, muted]);
 
   if (!src) return null;
 
@@ -24,13 +35,13 @@ export const PropertyMedia = ({
     const driveId = driveIdMatch ? driveIdMatch[1] : null;
 
     if (driveId && !videoError) {
-      const iframeSrc = `https://drive.google.com/file/d/${driveId}/preview`;
       const directVideoSrc = `https://lh3.googleusercontent.com/d/${driveId}`;
 
       return (
         <div className={`relative overflow-hidden bg-black ${className}`}>
-          {/* Try HTML video first for seamless play, or fallback to iframe preview */}
+          {/* Try HTML video first for seamless play */}
           <video
+            ref={videoRef}
             src={directVideoSrc}
             className="w-full h-full object-cover"
             autoPlay={autoPlay}
@@ -64,6 +75,7 @@ export const PropertyMedia = ({
     return (
       <div className={`relative overflow-hidden bg-black ${className}`}>
         <video
+          ref={videoRef}
           src={src}
           className="w-full h-full object-cover"
           autoPlay={autoPlay}

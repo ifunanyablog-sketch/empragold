@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 import { PropertyMedia } from './PropertyMedia';
 
 export const PropertyCard = ({ property, layout = 'grid' }) => {
-  const { wishlist, toggleWishlist, compareList, toggleCompare, setQuickViewModal, setInspectionModal } = useApp();
+  const { wishlist, toggleWishlist, compareList, toggleCompare, setQuickViewModal } = useApp();
 
   if (!property) return null;
 
@@ -20,7 +20,7 @@ export const PropertyCard = ({ property, layout = 'grid' }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="group relative bg-white border border-[#C9A227]/30 rounded-2xl overflow-hidden hover:border-[#C9A227]/60 transition-all duration-300 flex flex-col md:flex-row shadow-lg"
+        className="group relative bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col md:flex-row shadow-sm"
       >
         {/* Image / Video */}
         <div className="relative md:w-2/5 h-64 md:h-auto overflow-hidden shrink-0">
@@ -29,38 +29,40 @@ export const PropertyCard = ({ property, layout = 'grid' }) => {
             alt={property.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             loading="lazy"
+            autoPlay={true}
+            muted={true}
+            loop={true}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-black/20 pointer-events-none" />
 
           {/* Badges */}
-          <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-            <span className="bg-[#C9A227] text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+          <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+            <span className="bg-[#e2efe1] text-[#338424] text-xs font-bold px-3 py-1 rounded-full shadow-xs">
               {property.status}
             </span>
             {property.isLuxury && (
-              <span className="bg-white/95 border border-[#C9A227]/40 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md shadow-sm">
+              <span className="bg-white/90 border border-slate-200 text-slate-800 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-md shadow-xs">
                 Ultra Luxury
               </span>
             )}
           </div>
 
           {/* Quick Action Overlay */}
-          <div className="absolute bottom-4 right-4 flex gap-2">
+          <div className="absolute bottom-3 right-3 flex gap-2">
             <button
               onClick={() => setQuickViewModal({ isOpen: true, property })}
-              className="p-2.5 bg-white/90 text-slate-900 hover:bg-[#C9A227] hover:text-black rounded-full backdrop-blur-md transition-all shadow"
+              className="p-2 bg-white/90 text-slate-700 hover:text-[#4db038] hover:bg-white rounded-full backdrop-blur-md transition-all shadow-sm"
               title="Quick View"
             >
               <Eye className="w-4 h-4" />
             </button>
             <button
               onClick={() => toggleWishlist(property.id)}
-              className={`p-2.5 rounded-full backdrop-blur-md transition-all shadow ${
-                isLiked ? 'bg-[#C9A227] text-black' : 'bg-white/90 text-slate-900 hover:bg-[#C9A227] hover:text-black'
+              className={`p-2 rounded-full backdrop-blur-md transition-all shadow-sm ${
+                isLiked ? 'bg-[#4db038] text-white' : 'bg-white/90 text-slate-700 hover:text-[#4db038] hover:bg-white'
               }`}
               title="Save to Favorites"
             >
-              <Heart className={`w-4 h-4 ${isLiked ? 'fill-black' : ''}`} />
+              <Heart className={`w-4 h-4 ${isLiked ? 'fill-white' : ''}`} />
             </button>
           </div>
         </div>
@@ -70,17 +72,17 @@ export const PropertyCard = ({ property, layout = 'grid' }) => {
           <div>
             <div className="flex justify-between items-start gap-4 mb-2">
               <div>
-                <p className="text-xs text-[#C58B00] uppercase tracking-widest font-bold flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  {property.location}
-                </p>
                 <Link to={`/property/${property.slug}`}>
-                  <h3 className="text-xl font-bold text-slate-900 hover:text-[#D4AF37] transition-colors mt-1 line-clamp-1">
+                  <h3 className="text-xl font-bold text-[#111827] hover:text-[#4db038] transition-colors line-clamp-1">
                     {property.title}
                   </h3>
                 </Link>
+                <p className="text-xs text-slate-500 font-medium flex items-center gap-1 mt-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#4db038]" />
+                  {property.location}
+                </p>
               </div>
-              <p className="text-xl font-black text-[#C58B00] shrink-0">
+              <p className="text-xl font-bold text-[#48b02c] shrink-0">
                 {property.priceFormatted}
               </p>
             </div>
@@ -90,22 +92,18 @@ export const PropertyCard = ({ property, layout = 'grid' }) => {
             </p>
 
             {/* Specs */}
-            <div className="grid grid-cols-4 gap-2 py-3 border-y border-[#C9A227]/20 my-4 text-xs text-slate-800 font-semibold">
-              <div className="flex items-center gap-1.5">
-                <Bed className="w-4 h-4 text-[#C9A227]" />
-                <span>{property.bedrooms} Beds</span>
+            <div className="flex items-center gap-4 py-3 border-y border-slate-100 my-4 text-xs text-slate-600 font-medium">
+              <div className="flex items-center gap-1">
+                <Maximize2 className="w-3.5 h-3.5 text-slate-400" />
+                <span>{property.sqft.toLocaleString()} sq ft</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <Bath className="w-4 h-4 text-[#C9A227]" />
-                <span>{property.bathrooms} Baths</span>
+              <div className="flex items-center gap-1">
+                <Bed className="w-3.5 h-3.5 text-slate-400" />
+                <span>{property.bedrooms} Bed</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <Car className="w-4 h-4 text-[#C9A227]" />
-                <span>{property.garages} Garage</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Maximize2 className="w-4 h-4 text-[#C9A227]" />
-                <span>{property.sqft.toLocaleString()} Sq Ft</span>
+              <div className="flex items-center gap-1">
+                <Bath className="w-3.5 h-3.5 text-slate-400" />
+                <span>{property.bathrooms} Bath</span>
               </div>
             </div>
           </div>
@@ -114,155 +112,138 @@ export const PropertyCard = ({ property, layout = 'grid' }) => {
           <div className="flex items-center justify-between gap-4 pt-2">
             <button
               onClick={() => toggleCompare(property)}
-              className={`text-xs font-semibold flex items-center gap-1.5 transition-colors ${
-                isCompared ? 'text-[#C9A227]' : 'text-slate-700 hover:text-[#C9A227]'
+              className={`text-xs font-medium flex items-center gap-1.5 transition-colors ${
+                isCompared ? 'text-[#4db038] font-semibold' : 'text-slate-500 hover:text-slate-900'
               }`}
             >
-              <Layers className="w-3.5 h-3.5 text-[#C9A227]" />
+              <Layers className="w-3.5 h-3.5" />
               {isCompared ? 'Comparing' : 'Compare'}
             </button>
 
-            <div className="flex items-center gap-3">
-              <Link
-                to={`/property/${property.slug}`}
-                className="text-xs font-bold px-4 py-2 bg-[#C9A227] text-black hover:bg-[#B8860B] hover:text-white rounded-lg transition-all flex items-center gap-1 shadow-md"
-              >
-                Details <ArrowRight className="w-3.5 h-3.5 text-black" />
-              </Link>
-            </div>
+            <Link
+              to={`/property/${property.slug}`}
+              className="text-xs font-semibold px-4 py-2 border border-slate-300 text-slate-900 hover:bg-[#111827] hover:text-white rounded-full transition-all"
+            >
+              Invest now
+            </Link>
           </div>
         </div>
       </motion.div>
     );
   }
 
-  // Grid layout default
+  // Grid layout default matching Theme Reference Image
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="group bg-white border border-[#C9A227]/30 rounded-2xl overflow-hidden hover:border-[#C9A227]/60 transition-all duration-300 flex flex-col h-full shadow-lg"
+      className="group bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col h-full shadow-2xs"
     >
       {/* Top Image Container */}
-      <div className="relative h-64 overflow-hidden shrink-0">
+      <div className="relative h-56 overflow-hidden shrink-0">
         <PropertyMedia
           src={property.images[0]}
           alt={property.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
           loading="lazy"
+          autoPlay={true}
+          muted={true}
+          loop={true}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-black/20 pointer-events-none" />
 
-        {/* Status & Luxury Badges */}
-        <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-          <span className="bg-[#C9A227] text-black text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+        {/* Status & Badges */}
+        <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+          <span className="bg-[#e2efe1] text-[#338424] text-[11px] font-bold px-3 py-1 rounded-full shadow-2xs">
             {property.status}
           </span>
           {property.isLuxury && (
-            <span className="bg-white/95 border border-[#C9A227]/40 text-slate-900 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md shadow-sm">
-              Ultra Luxury
+            <span className="bg-white/90 text-slate-800 text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-md shadow-2xs">
+              Luxury
             </span>
           )}
         </div>
 
         {/* Action icons on top right */}
-        <div className="absolute top-4 right-4 flex gap-2">
+        <div className="absolute top-3 right-3 flex gap-1.5">
           <button
             onClick={() => toggleCompare(property)}
-            className={`p-2.5 rounded-full backdrop-blur-md transition-all shadow ${
-              isCompared ? 'bg-[#C9A227] text-black' : 'bg-white/90 text-slate-900 hover:bg-[#C9A227] hover:text-black'
+            className={`p-2 rounded-full backdrop-blur-md transition-all shadow-xs ${
+              isCompared ? 'bg-[#4db038] text-white' : 'bg-white/90 text-slate-700 hover:bg-white hover:text-[#4db038]'
             }`}
             title="Compare Property"
           >
-            <Layers className="w-4 h-4" />
+            <Layers className="w-3.5 h-3.5" />
           </button>
           <button
             onClick={() => toggleWishlist(property.id)}
-            className={`p-2.5 rounded-full backdrop-blur-md transition-all shadow ${
-              isLiked ? 'bg-[#C9A227] text-black' : 'bg-white/90 text-slate-900 hover:bg-[#C9A227] hover:text-black'
+            className={`p-2 rounded-full backdrop-blur-md transition-all shadow-xs ${
+              isLiked ? 'bg-[#4db038] text-white' : 'bg-white/90 text-slate-700 hover:bg-white hover:text-[#4db038]'
             }`}
             title="Favorite"
           >
-            <Heart className={`w-4 h-4 ${isLiked ? 'fill-black' : ''}`} />
+            <Heart className={`w-3.5 h-3.5 ${isLiked ? 'fill-white' : ''}`} />
           </button>
         </div>
 
-        {/* Quick View Button */}
+        {/* Quick View */}
         <button
           onClick={() => setQuickViewModal({ isOpen: true, property })}
-          className="absolute bottom-4 left-4 bg-white/90 hover:bg-[#C9A227] text-slate-900 hover:text-black text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-md transition-all flex items-center gap-1.5 shadow"
+          className="absolute bottom-3 left-3 bg-white/90 hover:bg-white text-slate-800 text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-md transition-all flex items-center gap-1 shadow-xs"
         >
-          <Eye className="w-3.5 h-3.5 text-[#C9A227]" />
+          <Eye className="w-3 h-3 text-[#4db038]" />
           Quick View
         </button>
-
-        {/* Price Tag */}
-        <div className="absolute bottom-4 right-4 text-right">
-          <span className="text-xl font-black text-slate-900 drop-shadow bg-white/90 px-2.5 py-1 rounded-lg border border-[#C9A227]/30">
-            {property.priceFormatted}
-          </span>
-        </div>
       </div>
 
-      {/* Content */}
+      {/* Content Area */}
       <div className="p-5 flex flex-col justify-between flex-1 bg-white">
         <div>
-          <p className="text-xs text-[#C58B00] uppercase tracking-widest font-bold flex items-center gap-1 mb-1.5">
-            <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
-            {property.location}
-          </p>
-
           <Link to={`/property/${property.slug}`}>
-            <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#C9A227] transition-colors line-clamp-1">
+            <h3 className="text-base font-bold text-[#111827] group-hover:text-[#4db038] transition-colors line-clamp-1">
               {property.title}
             </h3>
           </Link>
 
-          <p className="text-slate-600 text-xs line-clamp-2 mt-2 leading-relaxed font-normal">
-            {property.tagline || property.description}
+          <p className="text-xs text-slate-500 font-medium flex items-center gap-1 mt-1">
+            <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+            <span className="truncate">{property.location}</span>
           </p>
+
+          {/* Specs line matching reference image (sq ft, Bed, Bath) */}
+          <div className="flex items-center gap-3 text-xs text-slate-500 font-medium mt-3">
+            <span className="flex items-center gap-1">
+              <Maximize2 className="w-3 h-3 text-slate-400" />
+              {property.sqft.toLocaleString()} sq ft
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <Bed className="w-3 h-3 text-slate-400" />
+              {property.bedrooms} Bed
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <Bath className="w-3 h-3 text-slate-400" />
+              {property.bathrooms} Bath
+            </span>
+          </div>
         </div>
 
-        <div>
-          {/* Specs grid */}
-          <div className="grid grid-cols-4 gap-1 py-3 border-t border-[#C9A227]/20 mt-4 text-[11px] text-slate-800 text-center">
-            <div className="flex flex-col items-center">
-              <span className="text-slate-500 font-medium">Beds</span>
-              <span className="font-bold text-slate-900 flex items-center gap-1 mt-0.5">
-                <Bed className="w-3.5 h-3.5 text-[#C9A227]" /> {property.bedrooms}
-              </span>
-            </div>
-            <div className="flex flex-col items-center border-l border-[#C9A227]/20">
-              <span className="text-slate-500 font-medium">Baths</span>
-              <span className="font-bold text-slate-900 flex items-center gap-1 mt-0.5">
-                <Bath className="w-3.5 h-3.5 text-[#C9A227]" /> {property.bathrooms}
-              </span>
-            </div>
-            <div className="flex flex-col items-center border-l border-[#C9A227]/20">
-              <span className="text-slate-500 font-medium">Garage</span>
-              <span className="font-bold text-slate-900 flex items-center gap-1 mt-0.5">
-                <Car className="w-3.5 h-3.5 text-[#C9A227]" /> {property.garages}
-              </span>
-            </div>
-            <div className="flex flex-col items-center border-l border-[#C9A227]/20">
-              <span className="text-slate-500 font-medium">Sq Ft</span>
-              <span className="font-bold text-slate-900 flex items-center gap-1 mt-0.5">
-                <Maximize2 className="w-3.5 h-3.5 text-[#C9A227]" /> {property.sqft.toLocaleString()}
-              </span>
-            </div>
+        {/* Price & Action Row matching Image Reference */}
+        <div className="flex items-center justify-between gap-2 pt-4 mt-3 border-t border-slate-100">
+          <div>
+            <span className="text-lg font-extrabold text-[#48b02c]">
+              {property.priceFormatted}
+            </span>
           </div>
 
-          {/* Action Row */}
-          <div className="flex items-center gap-2 pt-3">
-            <Link
-              to={`/property/${property.slug}`}
-              className="w-full py-2.5 text-xs font-bold text-black bg-[#C9A227] hover:bg-[#B8860B] hover:text-white rounded-lg transition-all text-center flex items-center justify-center gap-1 shadow-md"
-            >
-              View Property <ArrowRight className="w-3.5 h-3.5 text-black hover:text-white" />
-            </Link>
-          </div>
+          <Link
+            to={`/property/${property.slug}`}
+            className="text-xs font-semibold px-4 py-2 border border-slate-300 text-slate-800 hover:border-[#111827] hover:bg-[#111827] hover:text-white rounded-full transition-all"
+          >
+            Invest now
+          </Link>
         </div>
       </div>
     </motion.div>

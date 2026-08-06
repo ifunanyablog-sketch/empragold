@@ -17,13 +17,13 @@ export const CompareDrawer = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 80, opacity: 0 }}
-        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-white border border-[#C9A227]/40 text-[#C9A227] rounded-2xl px-5 py-3 shadow-2xl backdrop-blur-xl flex items-center gap-4 max-w-xl w-[92%]"
+        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-white border border-slate-200 text-slate-800 rounded-2xl px-5 py-3 shadow-2xl backdrop-blur-xl flex items-center gap-4 max-w-xl w-[92%]"
       >
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-[#C9A227]/10 border border-[#C9A227] text-[#C9A227] flex items-center justify-center font-bold text-xs">
+          <div className="w-8 h-8 rounded-full bg-[#e2efe1] border border-[#338424]/30 text-[#338424] flex items-center justify-center font-bold text-xs">
             {compareList.length}
           </div>
-          <span className="text-xs font-semibold hidden sm:inline">Compare Selected</span>
+          <span className="text-xs font-semibold hidden sm:inline text-slate-700">Compare Selected</span>
         </div>
 
         {/* Thumbnail Avatars */}
@@ -31,7 +31,7 @@ export const CompareDrawer = () => {
           {compareList.map((prop) => (
             <div
               key={prop.id}
-              className="relative group w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C9A227]/30"
+              className="relative group w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-slate-200"
             >
               <img src={prop.images[0]} alt={prop.title} className="w-full h-full object-cover" />
               <button
@@ -46,7 +46,7 @@ export const CompareDrawer = () => {
 
         <button
           onClick={() => setIsOpenFull(true)}
-          className="bg-[#C9A227] text-white hover:bg-[#B8860B] text-xs font-bold px-4 py-2 rounded-lg transition-all shrink-0 uppercase tracking-wider flex items-center gap-1 shadow-md"
+          className="bg-[#4db038] text-white hover:bg-[#338424] text-xs font-bold px-4 py-2 rounded-lg transition-all shrink-0 uppercase tracking-wider flex items-center gap-1 shadow-md"
         >
           Compare Now <ArrowRight className="w-3.5 h-3.5 text-white" />
         </button>
@@ -60,20 +60,20 @@ export const CompareDrawer = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative w-full max-w-5xl bg-white border border-[#C9A227]/40 rounded-2xl p-6 shadow-2xl max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-5xl bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl max-h-[90vh] overflow-y-auto"
             >
               <button
                 onClick={() => setIsOpenFull(false)}
-                className="absolute top-5 right-5 text-[#C9A227] hover:text-[#9A7B1C]"
+                className="absolute top-5 right-5 text-slate-500 hover:text-slate-900"
               >
                 <X className="w-6 h-6" />
               </button>
 
               <div className="mb-6">
-                <span className="text-xs text-[#C9A227] uppercase tracking-widest font-semibold block mb-1">
+                <span className="text-xs text-[#338424] uppercase tracking-widest font-semibold block mb-1">
                   Side-by-Side Analysis
                 </span>
-                <h2 className="text-2xl font-serif font-bold text-[#C9A227]">Compare Luxury Properties</h2>
+                <h2 className="text-2xl font-bold text-slate-900">Compare Properties</h2>
               </div>
 
               {/* Matrix Table */}
@@ -81,9 +81,9 @@ export const CompareDrawer = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr>
-                      <th className="p-3 bg-slate-50 text-[#C9A227] font-semibold w-36">Property</th>
+                      <th className="p-3 bg-slate-50 text-slate-700 font-semibold w-36">Property</th>
                       {compareList.map((prop) => (
-                        <th key={prop.id} className="p-4 bg-slate-50 border-l border-[#C9A227]/20 min-w-[200px]">
+                        <th key={prop.id} className="p-4 bg-slate-50 border-l border-slate-200 min-w-[200px]">
                           <div className="relative mb-2">
                             <img
                               src={prop.images[0]}
@@ -100,59 +100,59 @@ export const CompareDrawer = () => {
                           <Link
                             to={`/property/${prop.slug}`}
                             onClick={() => setIsOpenFull(false)}
-                            className="font-serif font-bold text-[#C9A227] text-sm hover:text-[#9A7B1C] line-clamp-1 block"
+                            className="font-bold text-slate-900 text-sm hover:text-[#338424] line-clamp-1 block"
                           >
                             {prop.title}
                           </Link>
-                          <span className="text-[#9A7B1C] font-bold text-sm block mt-1">
+                          <span className="text-[#338424] font-bold text-sm block mt-1">
                             {prop.priceFormatted}
                           </span>
                         </th>
                       ))}
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#C9A227]/20">
+                  <tbody className="divide-y divide-slate-100">
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Location</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Location</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 text-[#C9A227]/90 border-l border-[#C9A227]/20">{p.location}</td>
+                        <td key={p.id} className="p-3 text-slate-600 border-l border-slate-200">{p.location}</td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Property Type</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Property Type</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 text-[#C9A227]/90 border-l border-[#C9A227]/20">{p.type}</td>
+                        <td key={p.id} className="p-3 text-slate-600 border-l border-slate-200">{p.type}</td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Bedrooms</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Bedrooms</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 text-[#C9A227] font-bold border-l border-[#C9A227]/20">{p.bedrooms} Beds</td>
+                        <td key={p.id} className="p-3 text-slate-800 font-bold border-l border-slate-200">{p.bedrooms} Beds</td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Bathrooms</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Bathrooms</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 text-[#C9A227] font-bold border-l border-[#C9A227]/20">{p.bathrooms} Baths</td>
+                        <td key={p.id} className="p-3 text-slate-800 font-bold border-l border-slate-200">{p.bathrooms} Baths</td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Garages</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Garages</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 text-[#C9A227]/90 border-l border-[#C9A227]/20">{p.garages} Cars</td>
+                        <td key={p.id} className="p-3 text-slate-600 border-l border-slate-200">{p.garages} Cars</td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Area</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Area</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 text-[#C9A227]/90 border-l border-[#C9A227]/20">{p.sqft.toLocaleString()} Sq Ft</td>
+                        <td key={p.id} className="p-3 text-slate-600 border-l border-slate-200">{p.sqft.toLocaleString()} Sq Ft</td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-3 text-[#C9A227] font-semibold bg-slate-50">Status</td>
+                      <td className="p-3 text-slate-700 font-semibold bg-slate-50">Status</td>
                       {compareList.map((p) => (
-                        <td key={p.id} className="p-3 border-l border-[#C9A227]/20">
-                          <span className="text-[#C9A227] font-semibold">{p.status}</span>
+                        <td key={p.id} className="p-3 border-l border-slate-200">
+                          <span className="text-[#338424] font-semibold">{p.status}</span>
                         </td>
                       ))}
                     </tr>

@@ -24,11 +24,8 @@ import { propertiesData } from '../data/propertiesData';
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const { wishlist, compareList } = useApp();
+  const { wishlist } = useApp();
   const location = useLocation();
-
-  const featuredProperty = propertiesData[0];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,29 +35,25 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
   }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Properties', path: '/properties', hasMegaMenu: true },
-    { name: 'Services', path: '/services', hasDropdown: true },
+    { name: 'Properties', path: '/properties' },
+    { name: 'Services', path: '/services' },
     { name: 'Property Management', path: '/property-management' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Private Agents', path: '/agents' },
-    { name: 'Journal', path: '/blog' },
+    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-xl border-b border-[#C9A227]/30 py-3 shadow-md'
-          : 'bg-transparent py-5'
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-xs'
+          : 'bg-[#eaf2ea]/80 backdrop-blur-xs py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,122 +63,93 @@ export const Navbar = () => {
             <Logo layout="compact" />
           </Link>
 
-          {/* Reduced Desktop Navigation Links matching Reference: Landlord, Agent, Renter, Pricing */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
-            <Link
-              to="/property-management"
-              className={`transition-colors ${
-                location.pathname === '/property-management' ? 'text-[#C9A227] font-bold underline underline-offset-4' : 'text-slate-900 hover:text-[#C9A227]'
-              }`}
-            >
-              Landlord
-            </Link>
-            <Link
-              to="/agents"
-              className={`transition-colors ${
-                location.pathname === '/agents' ? 'text-[#C9A227] font-bold underline underline-offset-4' : 'text-slate-900 hover:text-[#C9A227]'
-              }`}
-            >
-              Agent
-            </Link>
-            <Link
-              to="/properties"
-              className={`transition-colors ${
-                location.pathname === '/properties' ? 'text-[#C9A227] font-bold underline underline-offset-4' : 'text-slate-900 hover:text-[#C9A227]'
-              }`}
-            >
-              Renter
-            </Link>
-            <Link
-              to="/services"
-              className={`transition-colors ${
-                location.pathname === '/services' ? 'text-[#C9A227] font-bold underline underline-offset-4' : 'text-slate-900 hover:text-[#C9A227]'
-              }`}
-            >
-              Pricing
-            </Link>
+          {/* Desktop Navigation Links matching Image Reference */}
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`transition-colors py-1 ${
+                    isActive
+                      ? 'text-[#4db038] font-bold border-b-2 border-[#4db038]'
+                      : 'text-slate-700 hover:text-[#4db038]'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
-          {/* Far Right Action & Hamburger Menu Icon */}
-          <div className="flex items-center gap-4">
+          {/* Far Right Action Buttons matching Image Reference */}
+          <div className="flex items-center gap-3">
             {/* Wishlist Indicator */}
             {wishlist.length > 0 && (
-              <Link to="/properties?saved=true" className="relative p-1.5 text-slate-900 hover:text-[#C9A227] transition-colors" title="Saved Favorites">
-                <Heart className="w-4 h-4 fill-[#C9A227] text-[#C9A227]" />
-                <span className="absolute -top-1 -right-1 bg-[#C9A227] text-black text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
+              <Link
+                to="/properties?saved=true"
+                className="relative p-2 text-slate-700 hover:text-[#4db038] transition-colors"
+                title="Saved Favorites"
+              >
+                <Heart className="w-5 h-5 fill-[#4db038] text-[#4db038]" />
+                <span className="absolute top-0 right-0 bg-[#111827] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {wishlist.length}
                 </span>
               </Link>
             )}
 
-            {/* Reference Style 2-Line Hamburger Menu Toggle */}
+            {/* Light Log in Pill */}
+            <Link
+              to="/contact"
+              className="hidden sm:inline-flex items-center justify-center bg-white/90 hover:bg-slate-100 text-slate-800 text-xs font-semibold px-4 py-2 rounded-full border border-slate-200 transition-colors shadow-2xs"
+            >
+              Log in
+            </Link>
+
+            {/* Dark Charcoal Join Now / Contact Pill Button */}
+            <Link
+              to="/contact"
+              className="bg-[#111827] hover:bg-black text-white text-xs font-semibold px-5 py-2 rounded-full transition-all shadow-sm hover:scale-[1.02]"
+            >
+              Join now
+            </Link>
+
+            {/* Mobile Menu Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 text-slate-900 hover:text-[#C9A227] transition-colors flex flex-col justify-center gap-1.5 w-6 h-6 focus:outline-none"
+              className="lg:hidden p-2 text-slate-900 hover:text-[#4db038] transition-colors"
               aria-label="Toggle Navigation Menu"
             >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-slate-900" />
-              ) : (
-                <>
-                  <span className="w-6 h-[2.5px] bg-slate-900 rounded-full transition-transform" />
-                  <span className="w-6 h-[2.5px] bg-slate-900 rounded-full transition-transform" />
-                </>
-              )}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile & Drawer Navigation Menu */}
+      {/* Mobile Drawer Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="bg-white/98 border-b border-[#C9A227]/30 px-6 py-6 space-y-4 shadow-2xl backdrop-blur-2xl animate-fadeIn">
-          <div className="flex flex-col gap-3">
-            <Link
-              to="/property-management"
-              className="text-sm font-semibold text-slate-900 hover:text-[#C9A227] py-2 border-b border-[#C9A227]/20"
-            >
-              Landlord
-            </Link>
-            <Link
-              to="/agents"
-              className="text-sm font-semibold text-slate-900 hover:text-[#C9A227] py-2 border-b border-[#C9A227]/20"
-            >
-              Agent
-            </Link>
-            <Link
-              to="/properties"
-              className="text-sm font-semibold text-slate-900 hover:text-[#C9A227] py-2 border-b border-[#C9A227]/20"
-            >
-              Renter
-            </Link>
-            <Link
-              to="/services"
-              className="text-sm font-semibold text-slate-900 hover:text-[#C9A227] py-2 border-b border-[#C9A227]/20"
-            >
-              Pricing
-            </Link>
-            <Link
-              to="/about"
-              className="text-sm font-semibold text-slate-900 hover:text-[#C9A227] py-2 border-b border-[#C9A227]/20"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/contact"
-              className="text-sm font-semibold text-slate-900 hover:text-[#C9A227] py-2 border-b border-[#C9A227]/20"
-            >
-              Contact
-            </Link>
+        <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-3 shadow-xl animate-fadeIn">
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="text-sm font-semibold text-slate-800 hover:text-[#4db038] py-2.5 border-b border-slate-100 flex items-center justify-between"
+              >
+                {link.name}
+                <ArrowRight className="w-4 h-4 text-slate-400" />
+              </Link>
+            ))}
           </div>
 
-          <div className="pt-2 space-y-3">
+          <div className="pt-2 flex items-center gap-3">
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full bg-[#C9A227] text-black font-bold text-xs uppercase tracking-wider py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:bg-[#B8860B] hover:text-white transition-colors"
+              className="w-full bg-[#4db038] text-white font-bold text-xs py-3 rounded-full flex items-center justify-center gap-2 shadow-sm hover:bg-[#439c30] transition-colors"
             >
-              Contact Us <ArrowRight className="w-4 h-4 text-black" />
+              Contact Us <ArrowRight className="w-4 h-4 text-white" />
             </Link>
           </div>
         </div>

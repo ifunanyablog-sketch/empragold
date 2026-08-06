@@ -21,7 +21,7 @@ export const ToastContainer = () => {
                 ? 'bg-[#1A1A1D]/95 border-red-500/40 text-red-200'
                 : toast.type === 'info'
                 ? 'bg-[#1A1A1D]/95 border-blue-500/40 text-blue-200'
-                : 'bg-[#0F0F10]/95 border-[#C9A227]/40 text-white'
+                : 'bg-slate-900/95 border-[#4db038]/40 text-white'
             }`}
           >
             {toast.type === 'error' ? (
@@ -29,7 +29,7 @@ export const ToastContainer = () => {
             ) : toast.type === 'info' ? (
               <Info className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
             ) : (
-              <CheckCircle2 className="w-5 h-5 text-[#C9A227] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#4db038] shrink-0 mt-0.5" />
             )}
             <div className="flex-1 text-sm font-medium pr-2">{toast.message}</div>
             <button
