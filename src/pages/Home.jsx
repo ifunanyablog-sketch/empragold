@@ -17,7 +17,9 @@ import {
   TrendingUp, 
   Users, 
   Sparkles,
-  ArrowUpRight
+  ArrowUpRight,
+  Play,
+  Heart
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -47,126 +49,270 @@ export const Home = () => {
         description="Explore high-value real estate opportunities designed for financial growth and stability across Ikotun, Ikeja, Alimosho, and prime Lagos locations."
       />
 
-      {/* Hero Header Section with 4K Villa Background Image */}
-      <section className="relative pt-28 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[85vh] flex items-center justify-center">
-        {/* 4K Background Villa Image with vivid visibility */}
+      {/* Hero Header Section matching Image Reference Aesthetics in Website Green Theme */}
+      <section className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[88vh] flex flex-col justify-between">
+        {/* Full Screen Luxury Architectural Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src={heroVillaBg}
-            alt="4K Luxury Villa Hero Background"
-            className="w-full h-full object-cover object-center filter brightness-105 contrast-[1.02] opacity-95"
+            alt="Empragold Luxury Villa Architecture"
+            className="w-full h-full object-cover object-center filter brightness-[1.03] contrast-[1.05]"
             referrerPolicy="no-referrer"
           />
-          {/* Light transparent gradient overlay allowing high image visibility while maintaining text legibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#edf5ed]/35 via-white/25 to-[#edf5ed]/50" />
+          {/* Soft gradient overlay for high contrast and readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/50" />
         </div>
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          {/* Breadcrumb / Tag Pill */}
-          <div className="inline-flex items-center gap-2 bg-white/90 border border-emerald-100 text-[#338424] text-xs font-semibold px-4 py-1.5 rounded-full shadow-2xs mb-6">
-            <span>Home</span>
-            <span className="text-slate-300">/</span>
-            <span>Properties</span>
+        {/* Content Container matching Image Reference Layout Grid */}
+        <div className="max-w-7xl mx-auto w-full relative z-10 flex-1 flex flex-col justify-between pt-2 sm:pt-6">
+          
+          {/* Top Section: Structured Row with 80K Card (Left) & Giant Green "BOOK YOUR DREAM" (Right) */}
+          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+            
+            {/* Top Left Floating Card: 80K+ Trusted Owners */}
+            <motion.div 
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="self-start"
+            >
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/80 max-w-[220px] sm:max-w-[250px] transform hover:scale-[1.02] transition-transform">
+                {/* Green Top Accent Line */}
+                <div className="w-10 h-1 bg-[#4db038] rounded-full mb-3" />
+                
+                {/* Overlapping User Avatars */}
+                <div className="flex -space-x-2 overflow-hidden mb-2.5">
+                  <img 
+                    className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover shadow-xs" 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
+                    alt="Property Owner 1" 
+                  />
+                  <img 
+                    className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover shadow-xs" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
+                    alt="Property Owner 2" 
+                  />
+                </div>
+
+                {/* Counter Metric */}
+                <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                  80K+
+                </div>
+                <p className="text-xs text-slate-600 font-bold mt-0.5">
+                  Trusted by property owners
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Top Right Headline: "BOOK YOUR DREAM" in Website Green Theme */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="lg:text-right text-left"
+            >
+              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[#4db038] uppercase leading-[0.92] drop-shadow-md select-none">
+                BOOK YOUR <br />
+                <span className="text-[#5cd645] drop-shadow-lg">DREAM</span>
+              </h1>
+            </motion.div>
           </div>
 
-          {/* Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#111827] tracking-tight leading-[1.15] drop-shadow-sm">
-            Find your perfect investment properties
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-slate-700 text-sm sm:text-base max-w-2xl mx-auto mt-4 font-medium leading-relaxed drop-shadow-2xs">
-            Explore a selection of high-value real estate opportunities designed for financial growth and stability.
-          </p>
-
-          {/* Floating Search & Filter Bar matching Image Reference */}
-          <div className="mt-10 bg-white rounded-2xl shadow-xl p-5 sm:p-7 border border-slate-200/80 text-left max-w-4xl mx-auto">
-            <form onSubmit={handleQuickSearch} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {/* Field 1: Enter address */}
-                <div>
-                  <label className="text-xs font-bold text-slate-800 block mb-1.5">
-                    Enter address
-                  </label>
-                  <div className="relative">
-                    <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                    <input
-                      type="text"
-                      placeholder="e.g. Opebi, Ikotun, Alimosho..."
-                      value={addressQuery}
-                      onChange={(e) => setAddressQuery(e.target.value)}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-xs text-slate-900 font-medium focus:outline-none focus:border-[#4db038] focus:bg-white transition-all"
-                    />
+          {/* Bottom Section: Perfectly Aligned Interactive Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 items-end my-6 sm:my-10">
+            
+            {/* Bottom-Left Card: Cutting Edge Tech Inside */}
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="lg:col-span-5"
+            >
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/80 max-w-xs transform hover:scale-[1.02] transition-transform">
+                <span className="text-xs sm:text-sm font-extrabold text-slate-900 block mb-2">
+                  Cutting edge tech inside
+                </span>
+                
+                {/* Tech Bar/Graph Graphic Box */}
+                <div className="bg-emerald-50/80 rounded-xl p-2.5 border border-emerald-100 mb-3 flex flex-col items-center justify-center">
+                  <div className="flex items-end gap-1.5 h-9 py-1">
+                    <div className="w-2 bg-[#4db038]/40 h-3 rounded-full" />
+                    <div className="w-2 bg-[#4db038] h-7 rounded-full" />
+                    <div className="w-2 bg-[#4db038]/60 h-5 rounded-full" />
+                    <div className="w-2 bg-[#338424] h-9 rounded-full" />
+                    <div className="w-2 bg-[#4db038]/50 h-4 rounded-full" />
                   </div>
+                  <span className="text-[10px] text-[#338424] font-mono tracking-widest block font-bold mt-1">
+                    - 300 1m -
+                  </span>
                 </div>
 
-                {/* Field 2: Location */}
-                <div>
-                  <label className="text-xs font-bold text-slate-800 block mb-1.5">
-                    Location
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                    <select
-                      value={searchLocation}
-                      onChange={(e) => setSearchLocation(e.target.value)}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-8 py-3 text-xs text-slate-900 font-medium focus:outline-none focus:border-[#4db038] focus:bg-white transition-all appearance-none cursor-pointer"
-                    >
-                      <option value="All">All Locations</option>
-                      <option value="Abaranje, Ikotun">Abaranje, Ikotun</option>
-                      <option value="Opebi, Ikeja">Opebi, Ikeja</option>
-                      <option value="Alimosho">Alimosho BRT Axis</option>
-                      <option value="LASU Igando Road">LASU / Igando Road</option>
-                      <option value="Ifako Ijaiye / Oja Agbado">Ifako Ijaiye / Oja Agbado</option>
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
-                  </div>
-                </div>
-
-                {/* Field 3: Property type */}
-                <div>
-                  <label className="text-xs font-bold text-slate-800 block mb-1.5">
-                    Property type
-                  </label>
-                  <div className="relative">
-                    <HomeIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                    <select
-                      value={searchType}
-                      onChange={(e) => setSearchType(e.target.value)}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-8 py-3 text-xs text-slate-900 font-medium focus:outline-none focus:border-[#4db038] focus:bg-white transition-all appearance-none cursor-pointer"
-                    >
-                      <option value="All">All Types</option>
-                      <option value="Flats">Blocks of Flats / Apartments</option>
-                      <option value="Duplex">Terrace Duplex</option>
-                      <option value="Bungalow">Bungalow</option>
-                      <option value="Land">Full Plot of Land</option>
-                      <option value="Shops">Commercial Shops</option>
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Buttons Row */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto bg-[#4db038] hover:bg-[#439c30] text-white font-bold text-xs px-8 py-3.5 rounded-full shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <Search className="w-4 h-4 text-white" />
-                  Search Property
-                </button>
-                <button
-                  type="button"
+                <button 
                   onClick={() => navigate('/properties')}
-                  className="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs px-6 py-3.5 rounded-full transition-all flex items-center justify-center gap-2"
+                  className="text-xs font-bold text-[#338424] flex items-center gap-1 hover:text-[#4db038] transition-colors cursor-pointer"
                 >
-                  <SlidersHorizontal className="w-3.5 h-3.5 text-slate-600" />
-                  Advanced Search
+                  Check it now <ArrowUpRight className="w-3.5 h-3.5 text-[#4db038]" />
                 </button>
               </div>
-            </form>
+            </motion.div>
+
+            {/* Bottom-Right Card: Step Into Comfort */}
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="lg:col-span-7 sm:justify-self-end w-full max-w-sm"
+            >
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/80 w-full transform hover:scale-[1.02] transition-transform">
+                <div className="flex items-center justify-between mb-2.5">
+                  <span className="text-sm font-extrabold text-slate-900">
+                    Step into comfort
+                  </span>
+                  <button 
+                    onClick={() => navigate('/properties')}
+                    className="w-8 h-8 rounded-full bg-[#4db038] hover:bg-[#338424] text-white flex items-center justify-center shadow-md hover:scale-110 transition-all cursor-pointer"
+                    title="Explore Interiors"
+                  >
+                    <Play className="w-3.5 h-3.5 fill-white ml-0.5" />
+                  </button>
+                </div>
+                
+                {/* Interior Bedroom Photo */}
+                <div className="rounded-xl overflow-hidden h-32 sm:h-36 shadow-inner relative group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" 
+                    alt="Luxury Bedroom Comfort" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
+                </div>
+              </div>
+            </motion.div>
+
           </div>
+
+          {/* Bottom Center CTA Button: EXPLORE ↗ in Green Theme */}
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="flex justify-center pb-1"
+          >
+            <button 
+              onClick={() => {
+                const element = document.getElementById('search-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  navigate('/properties');
+                }
+              }}
+              className="bg-[#4db038] hover:bg-[#338424] text-white font-extrabold text-sm uppercase tracking-wider px-10 sm:px-14 py-3.5 rounded-xl shadow-xl flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer border border-emerald-300/40"
+            >
+              EXPLORE <ArrowUpRight className="w-4 h-4 text-white stroke-[3]" />
+            </button>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* Floating Quick Search & Filter Bar Section */}
+      <section id="search-section" className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-6 relative z-20">
+        <div className="bg-white rounded-3xl shadow-xl p-5 sm:p-7 border border-slate-200 text-left">
+          <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100">
+            <div>
+              <h3 className="text-base font-bold text-slate-900">Search Properties</h3>
+              <p className="text-xs text-slate-500">Find your ideal home or investment site in Lagos</p>
+            </div>
+            <span className="text-xs font-semibold text-[#338424] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              Verified Titles
+            </span>
+          </div>
+
+          <form onSubmit={handleQuickSearch} className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* Field 1: Enter address */}
+              <div>
+                <label className="text-xs font-bold text-slate-800 block mb-1.5">
+                  Enter address
+                </label>
+                <div className="relative">
+                  <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                  <input
+                    type="text"
+                    placeholder="e.g. Opebi, Ikotun, Alimosho..."
+                    value={addressQuery}
+                    onChange={(e) => setAddressQuery(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-xs text-slate-900 font-medium focus:outline-none focus:border-[#4db038] focus:bg-white transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Field 2: Location */}
+              <div>
+                <label className="text-xs font-bold text-slate-800 block mb-1.5">
+                  Location
+                </label>
+                <div className="relative">
+                  <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                  <select
+                    value={searchLocation}
+                    onChange={(e) => setSearchLocation(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-8 py-3 text-xs text-slate-900 font-medium focus:outline-none focus:border-[#4db038] focus:bg-white transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="All">All Locations</option>
+                    <option value="Abaranje, Ikotun">Abaranje, Ikotun</option>
+                    <option value="Opebi, Ikeja">Opebi, Ikeja</option>
+                    <option value="Alimosho">Alimosho BRT Axis</option>
+                    <option value="LASU Igando Road">LASU / Igando Road</option>
+                    <option value="Ifako Ijaiye / Oja Agbado">Ifako Ijaiye / Oja Agbado</option>
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                </div>
+              </div>
+
+              {/* Field 3: Property type */}
+              <div>
+                <label className="text-xs font-bold text-slate-800 block mb-1.5">
+                  Property type
+                </label>
+                <div className="relative">
+                  <HomeIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                  <select
+                    value={searchType}
+                    onChange={(e) => setSearchType(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-8 py-3 text-xs text-slate-900 font-medium focus:outline-none focus:border-[#4db038] focus:bg-white transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="All">All Types</option>
+                    <option value="Flats">Blocks of Flats / Apartments</option>
+                    <option value="Duplex">Terrace Duplex</option>
+                    <option value="Bungalow">Bungalow</option>
+                    <option value="Land">Full Plot of Land</option>
+                    <option value="Shops">Commercial Shops</option>
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                </div>
+              </div>
+            </div>
+
+            {/* Action Buttons Row */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="submit"
+                className="w-full sm:w-auto bg-[#4db038] hover:bg-[#439c30] text-white font-bold text-xs px-8 py-3.5 rounded-full shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Search className="w-4 h-4 text-white" />
+                Search Property
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate('/properties')}
+                className="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs px-6 py-3.5 rounded-full transition-all flex items-center justify-center gap-2"
+              >
+                <SlidersHorizontal className="w-3.5 h-3.5 text-slate-600" />
+                Advanced Search
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 

@@ -52,8 +52,8 @@ export const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-xs'
-          : 'bg-[#eaf2ea]/80 backdrop-blur-xs py-4'
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-1.5 sm:py-2 shadow-md'
+          : 'bg-[#eaf2ea]/90 backdrop-blur-md py-2 sm:py-2.5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
