@@ -1,6 +1,6 @@
 import alimoshoLandImg from "../assets/images/alimosho_brt_land_1786011122801.jpg";
 import lasuBungalowImg from "../assets/images/lasu_bungalow_ina_junction_1786022842517.jpg";
-import drOlumideImg from "../assets/images/dr_olumide_adeleke_official.png";
+import empraGoldBossImg from "../assets/images/empragold_boss_new.png";
 
 export const propertiesData = [
   {
@@ -619,11 +619,11 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "Dr. Olumide Adeleke",
-      title: "Senior Vice President of Luxury Sales",
+      name: "EmpraGold Boss",
+      title: "CEO of EmpraGold Real Estate",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: drOlumideImg
+      image: empraGoldBossImg
     }
   },
   {
@@ -663,11 +663,11 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "Dr. Olumide Adeleke",
-      title: "Senior Vice President of Luxury Sales",
+      name: "EmpraGold Boss",
+      title: "CEO of EmpraGold Real Estate",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: drOlumideImg
+      image: empraGoldBossImg
     }
   },
   {
@@ -708,11 +708,11 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "Dr. Olumide Adeleke",
-      title: "Senior Vice President of Luxury Sales",
+      name: "EmpraGold Boss",
+      title: "CEO of EmpraGold Real Estate",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: drOlumideImg
+      image: empraGoldBossImg
     }
   },
   {
@@ -752,11 +752,11 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "Dr. Olumide Adeleke",
-      title: "Senior Vice President of Luxury Sales",
+      name: "EmpraGold Boss",
+      title: "CEO of EmpraGold Real Estate",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: drOlumideImg
+      image: empraGoldBossImg
     }
   },
   {

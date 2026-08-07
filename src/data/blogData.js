@@ -1,4 +1,4 @@
-import drOlumideImg from '../assets/images/dr_olumide_adeleke_official.png';
+import empraGoldBossImg from '../assets/images/empragold_boss_new.png';
 
 export const blogData = [
   {
@@ -7,9 +7,9 @@ export const blogData = [
     title: "Navigating Ultra-Luxury Real Estate Trends in 2026: What High-Net-Worth Buyers Demand",
     category: "Market Insights",
     author: {
-      name: "Dr. Olumide Adeleke",
-      role: "Senior Vice President",
-      image: drOlumideImg
+      name: "EmpraGold Boss",
+      role: "CEO of EmpraGold Real Estate",
+      image: empraGoldBossImg
     },
     publishedAt: "August 1, 2026",
     readTime: "6 min read",
@@ -35,9 +35,9 @@ export const blogData = [
     title: "Why Grade-A Commercial Real Estate Remains the Ultimate Inflation Hedge",
     category: "Investment Advisory",
     author: {
-      name: "Dr. Olumide Adeleke",
-      role: "Senior Vice President",
-      image: drOlumideImg
+      name: "EmpraGold Boss",
+      role: "CEO of EmpraGold Real Estate",
+      image: empraGoldBossImg
     },
     publishedAt: "July 24, 2026",
     readTime: "8 min read",
@@ -57,9 +57,9 @@ export const blogData = [
     title: "Inside Banana Island: Living in Lagos' Most Exclusive Sanctuary",
     category: "Neighborhood Spotlight",
     author: {
-      name: "Dr. Olumide Adeleke",
-      role: "Senior Vice President",
-      image: drOlumideImg
+      name: "EmpraGold Boss",
+      role: "CEO of EmpraGold Real Estate",
+      image: empraGoldBossImg
     },
     publishedAt: "July 15, 2026",
     readTime: "5 min read",
@@ -208,7 +208,7 @@ export const faqData = [
 export const testimonialsData = [
   {
     id: 1,
-    quote: "Empragold handled the acquisition of our Banana Island waterfront mansion with extreme discretion. Dr. Olumide Adeleke's market knowledge and negotiation finesse saved us over ₦60,000,000 off the asking price.",
+    quote: "Empragold handled the acquisition of our Banana Island waterfront mansion with extreme discretion. EmpraGold Boss's market knowledge and negotiation finesse saved us over ₦60,000,000 off the asking price.",
     author: "Chief Olusegun Alabi",
     role: "Chairman, Alabi Global Holdings",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",

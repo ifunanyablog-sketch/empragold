@@ -59,9 +59,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="group hover:opacity-95 transition-opacity">
-            <Logo layout="compact" />
-          </Link>
+          <Logo layout="compact" />
 
           {/* Desktop Navigation Links matching Image Reference */}
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">

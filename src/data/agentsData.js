@@ -1,15 +1,15 @@
-import drOlumideImg from '../assets/images/dr_olumide_adeleke_official.png';
+import empraGoldBossImg from '../assets/images/empragold_boss_new.png';
 
 export const agentsData = [
   {
     id: "agent-1",
-    name: "Dr. Olumide Adeleke",
-    role: "Senior Vice President of Luxury Sales",
+    name: "EmpraGold Boss",
+    role: "CEO of EmpraGold Real Estate",
     experience: "14+ Years Experience",
     phone: "+234 815 678 9757",
     email: "adediresesan@gmail.com",
-    image: drOlumideImg,
-    bio: "Dr. Olumide Adeleke is renowned for brokering high-value residential and commercial property transactions across Lagos, Abuja, and Port Harcourt. Specializing in prime waterfront estates, luxury apartments, and off-market deals, he brings immaculate discretion to discerning clients.",
+    image: empraGoldBossImg,
+    bio: "EmpraGold Boss is renowned for brokering high-value residential and commercial property transactions across Lagos, Abuja, and Port Harcourt. Specializing in prime waterfront estates, luxury apartments, and off-market deals, he brings immaculate discretion to discerning clients.",
     specialties: ["Luxury Penthouses", "Waterfront Estates", "Off-Market Deals", "Private Client Advisory"],
     salesVolume: "₦180 Billion+ Closed Transactions",
     activeListings: 12,

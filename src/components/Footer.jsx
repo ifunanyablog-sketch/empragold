@@ -25,9 +25,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-100">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
-            <Link to="/" className="inline-block hover:opacity-95 transition-opacity">
-              <Logo layout="full" showRc={true} className="!items-start !text-left" />
-            </Link>
+            <Logo layout="full" showRc={true} className="!items-start !text-left" />
 
             <p className="text-xs text-[#338424] font-bold italic leading-relaxed pr-4">
               "Trusted Properties. Smart Investments. Outstanding Service."

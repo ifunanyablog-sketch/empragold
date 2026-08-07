@@ -5,7 +5,7 @@ import { PropertyCard } from '../components/PropertyCard';
 import { PropertyMedia } from '../components/PropertyMedia';
 import { propertiesData, communitiesData } from '../data/propertiesData';
 import heroVillaBg from '../assets/images/hero_villa_background_1786026136278.jpg';
-import drOlumideImg from '../assets/images/dr_olumide_adeleke_official.png';
+import empraGoldBossImg from '../assets/images/empragold_boss_new.png';
 import { 
   Search, 
   MapPin, 
@@ -90,8 +90,8 @@ export const Home = () => {
                   />
                   <img 
                     className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover shadow-xs" 
-                    src={drOlumideImg} 
-                    alt="Dr. Olumide Adeleke" 
+                    src={empraGoldBossImg} 
+                    alt="EmpraGold Boss" 
                   />
                 </div>
 
