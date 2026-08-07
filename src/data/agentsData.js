@@ -1,4 +1,4 @@
-import empraGoldBossImg from '../assets/images/empragold_boss_avif.avif';
+import empraGoldBossImg from '../assets/images/empragold_boss_exact_1786120270388.jpg';
 
 export const agentsData = [
   {

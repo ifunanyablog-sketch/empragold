@@ -1,6 +1,6 @@
 import alimoshoLandImg from "../assets/images/alimosho_brt_land_1786011122801.jpg";
 import lasuBungalowImg from "../assets/images/lasu_bungalow_ina_junction_1786022842517.jpg";
-import empraGoldBossImg from "../assets/images/empragold_boss_avif.avif";
+import empraGoldBossImg from "../assets/images/empragold_boss_exact_1786120270388.jpg";
 
 export const propertiesData = [
   {
