@@ -1,3 +1,5 @@
+import drOlumideImg from '../assets/images/dr_olumide_adeleke_official.png';
+
 export const blogData = [
   {
     id: "blog-1",
@@ -7,7 +9,7 @@ export const blogData = [
     author: {
       name: "Dr. Olumide Adeleke",
       role: "Senior Vice President",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+      image: drOlumideImg
     },
     publishedAt: "August 1, 2026",
     readTime: "6 min read",
@@ -33,9 +35,9 @@ export const blogData = [
     title: "Why Grade-A Commercial Real Estate Remains the Ultimate Inflation Hedge",
     category: "Investment Advisory",
     author: {
-      name: "Mrs. Chioma Okonkwo-Adeyemi",
-      role: "Director of Rentals",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=300&q=80"
+      name: "Dr. Olumide Adeleke",
+      role: "Senior Vice President",
+      image: drOlumideImg
     },
     publishedAt: "July 24, 2026",
     readTime: "8 min read",
@@ -55,9 +57,9 @@ export const blogData = [
     title: "Inside Banana Island: Living in Lagos' Most Exclusive Sanctuary",
     category: "Neighborhood Spotlight",
     author: {
-      name: "Engr. Babatunde Ogunleye",
-      role: "Head of Private Client Group",
-      image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=300&q=80"
+      name: "Dr. Olumide Adeleke",
+      role: "Senior Vice President",
+      image: drOlumideImg
     },
     publishedAt: "July 15, 2026",
     readTime: "5 min read",

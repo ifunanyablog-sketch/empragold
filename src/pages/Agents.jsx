@@ -29,10 +29,12 @@ export const Agents = () => {
         </div>
 
         {/* Agents Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
-          {agentsData.map((agent) => (
-            <AgentCard key={agent.id} agent={agent} />
-          ))}
+        <div className="flex justify-center my-12">
+          <div className="w-full max-w-md">
+            {agentsData.map((agent) => (
+              <AgentCard key={agent.id} agent={agent} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

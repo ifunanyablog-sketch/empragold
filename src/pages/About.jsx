@@ -120,15 +120,17 @@ export const About = () => {
             <h2 className="text-3xl font-bold text-slate-900">Our Advisory Team</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {agentsData.map((agent) => (
-              <div key={agent.id} className="bg-white border border-slate-200 rounded-2xl p-5 text-center shadow-2xs">
-                <img src={agent.image} alt={agent.name} className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-[#4db038]" />
-                <h3 className="text-lg font-bold text-slate-900">{agent.name}</h3>
-                <span className="text-xs text-[#338424] uppercase font-semibold block mt-1">{agent.role}</span>
-                <p className="text-xs text-slate-600 mt-3 line-clamp-3">{agent.bio}</p>
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="max-w-md w-full">
+              {agentsData.map((agent) => (
+                <div key={agent.id} className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-md">
+                  <img src={agent.image} alt={agent.name} className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-3 border-[#4db038] shadow-sm" />
+                  <h3 className="text-xl font-bold text-slate-900">{agent.name}</h3>
+                  <span className="text-xs text-[#338424] uppercase font-bold block mt-1">{agent.role}</span>
+                  <p className="text-sm text-slate-600 mt-3 leading-relaxed">{agent.bio}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

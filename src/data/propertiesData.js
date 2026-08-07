@@ -1,5 +1,6 @@
 import alimoshoLandImg from "../assets/images/alimosho_brt_land_1786011122801.jpg";
 import lasuBungalowImg from "../assets/images/lasu_bungalow_ina_junction_1786022842517.jpg";
+import drOlumideImg from "../assets/images/dr_olumide_adeleke_official.png";
 
 export const propertiesData = [
   {
@@ -617,12 +618,12 @@ export const propertiesData = [
     ],
     floorPlans: [],
     agent: {
-      id: "agent-2",
-      name: "Engr. Babatunde Ogunleye",
-      title: "Head of Private Client Group",
+      id: "agent-1",
+      name: "Dr. Olumide Adeleke",
+      title: "Senior Vice President of Luxury Sales",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=800&q=80"
+      image: drOlumideImg
     }
   },
   {
@@ -666,7 +667,7 @@ export const propertiesData = [
       title: "Senior Vice President of Luxury Sales",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: "https://kommodo.ai/i/4iFxGXQmY15ORB2ccEw7"
+      image: drOlumideImg
     }
   },
   {
@@ -706,12 +707,12 @@ export const propertiesData = [
     ],
     floorPlans: [],
     agent: {
-      id: "agent-4",
-      name: "Alhaji Farouk Ibrahim",
-      title: "VP of Strategic Developments & Diaspora Advisory",
+      id: "agent-1",
+      name: "Dr. Olumide Adeleke",
+      title: "Senior Vice President of Luxury Sales",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+      image: drOlumideImg
     }
   },
   {
@@ -750,12 +751,12 @@ export const propertiesData = [
     ],
     floorPlans: [],
     agent: {
-      id: "agent-3",
-      name: "Mrs. Chioma Okonkwo-Adeyemi",
-      title: "Director of Residential & Commercial Rentals",
+      id: "agent-1",
+      name: "Dr. Olumide Adeleke",
+      title: "Senior Vice President of Luxury Sales",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"
+      image: drOlumideImg
     }
   },
   {

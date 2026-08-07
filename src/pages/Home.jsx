@@ -5,6 +5,7 @@ import { PropertyCard } from '../components/PropertyCard';
 import { PropertyMedia } from '../components/PropertyMedia';
 import { propertiesData, communitiesData } from '../data/propertiesData';
 import heroVillaBg from '../assets/images/hero_villa_background_1786026136278.jpg';
+import drOlumideImg from '../assets/images/dr_olumide_adeleke_official.png';
 import { 
   Search, 
   MapPin, 
@@ -89,8 +90,8 @@ export const Home = () => {
                   />
                   <img 
                     className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover shadow-xs" 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
-                    alt="Property Owner 2" 
+                    src={drOlumideImg} 
+                    alt="Dr. Olumide Adeleke" 
                   />
                 </div>
 
