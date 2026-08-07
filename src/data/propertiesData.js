@@ -619,7 +619,7 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "EmpraGold Boss",
+      name: "Adedire Sesan",
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
@@ -663,7 +663,7 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "EmpraGold Boss",
+      name: "Adedire Sesan",
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
@@ -708,7 +708,7 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "EmpraGold Boss",
+      name: "Adedire Sesan",
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
@@ -752,7 +752,7 @@ export const propertiesData = [
     floorPlans: [],
     agent: {
       id: "agent-1",
-      name: "EmpraGold Boss",
+      name: "Adedire Sesan",
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",

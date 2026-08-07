@@ -91,7 +91,7 @@ export const Home = () => {
                   <img 
                     className="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white object-cover shadow-xs" 
                     src={empraGoldBossImg} 
-                    alt="EmpraGold Boss" 
+                    alt="Adedire Sesan" 
                   />
                 </div>
 
