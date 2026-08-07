@@ -1,4 +1,4 @@
-import empraGoldBossImg from '../assets/images/empragold_boss.png';
+import adedireSesanImg from '../assets/images/adedire_sesan.png';
 
 export const agentsData = [
   {
@@ -8,7 +8,7 @@ export const agentsData = [
     experience: "14+ Years Experience",
     phone: "+234 815 678 9757",
     email: "adediresesan@gmail.com",
-    image: empraGoldBossImg,
+    image: adedireSesanImg,
     bio: "Adedire Sesan is renowned for brokering high-value residential and commercial property transactions across Lagos, Abuja, and Port Harcourt. Specializing in prime waterfront estates, luxury apartments, and off-market deals, he brings immaculate discretion to discerning clients.",
     specialties: ["Luxury Penthouses", "Waterfront Estates", "Off-Market Deals", "Private Client Advisory"],
     salesVolume: "₦180 Billion+ Closed Transactions",

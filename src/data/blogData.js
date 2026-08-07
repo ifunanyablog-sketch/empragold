@@ -1,4 +1,4 @@
-import empraGoldBossImg from '../assets/images/empragold_boss.png';
+import adedireSesanImg from '../assets/images/adedire_sesan.png';
 
 export const blogData = [
   {
@@ -9,7 +9,7 @@ export const blogData = [
     author: {
       name: "Adedire Sesan",
       role: "CEO of Empragold Estate Realtors LTD",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     },
     publishedAt: "August 1, 2026",
     readTime: "6 min read",
@@ -37,7 +37,7 @@ export const blogData = [
     author: {
       name: "Adedire Sesan",
       role: "CEO of Empragold Estate Realtors LTD",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     },
     publishedAt: "July 24, 2026",
     readTime: "8 min read",
@@ -59,7 +59,7 @@ export const blogData = [
     author: {
       name: "Adedire Sesan",
       role: "CEO of Empragold Estate Realtors LTD",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     },
     publishedAt: "July 15, 2026",
     readTime: "5 min read",

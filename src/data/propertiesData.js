@@ -1,6 +1,6 @@
 import alimoshoLandImg from "../assets/images/alimosho_brt_land_1786011122801.jpg";
 import lasuBungalowImg from "../assets/images/lasu_bungalow_ina_junction_1786022842517.jpg";
-import empraGoldBossImg from "../assets/images/empragold_boss.png";
+import adedireSesanImg from "../assets/images/adedire_sesan.png";
 
 export const propertiesData = [
   {
@@ -57,7 +57,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -114,7 +114,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -178,7 +178,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -235,7 +235,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -290,7 +290,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -349,7 +349,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -405,7 +405,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -460,7 +460,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -517,7 +517,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -579,7 +579,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -623,7 +623,7 @@ export const propertiesData = [
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -667,7 +667,7 @@ export const propertiesData = [
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -712,7 +712,7 @@ export const propertiesData = [
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -756,7 +756,7 @@ export const propertiesData = [
       title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   },
   {
@@ -812,7 +812,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: empraGoldBossImg
+      image: adedireSesanImg
     }
   }
 ];
