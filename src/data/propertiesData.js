@@ -57,7 +57,7 @@ export const propertiesData = [
       title: "Direct Real Estate Advisory (RC: 8323733)",
       phone: "08156789757",
       email: "adediresesan@gmail.com",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+      image: "https://cdn.imageurlgenerator.com/uploads/66e520a2-f006-4fa0-bb39-0987ceeaefd3.png"
     }
   },
   {
