@@ -5,7 +5,7 @@ import { PropertyCard } from '../components/PropertyCard';
 import { PropertyMedia } from '../components/PropertyMedia';
 import { propertiesData, communitiesData } from '../data/propertiesData';
 import heroVillaBg from '../assets/images/hero_villa_background_1786026136278.jpg';
-import empraGoldBossImg from '../assets/images/empragold_boss.jpg';
+import empraGoldBossImg from '../assets/images/empragold_boss.png';
 import { 
   Search, 
   MapPin, 

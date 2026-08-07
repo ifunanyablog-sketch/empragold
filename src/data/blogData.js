@@ -1,4 +1,4 @@
-import empraGoldBossImg from '../assets/images/empragold_boss.jpg';
+import empraGoldBossImg from '../assets/images/empragold_boss.png';
 
 export const blogData = [
   {
