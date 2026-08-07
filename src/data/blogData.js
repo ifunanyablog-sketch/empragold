@@ -1,4 +1,4 @@
-import empraGoldBossImg from '../assets/images/empragold_boss_new.png';
+import empraGoldBossImg from '../assets/images/empragold_boss_avif.avif';
 
 export const blogData = [
   {
@@ -8,7 +8,7 @@ export const blogData = [
     category: "Market Insights",
     author: {
       name: "EmpraGold Boss",
-      role: "CEO of EmpraGold Real Estate",
+      role: "CEO of Empragold Estate Realtors LTD",
       image: empraGoldBossImg
     },
     publishedAt: "August 1, 2026",
@@ -36,7 +36,7 @@ export const blogData = [
     category: "Investment Advisory",
     author: {
       name: "EmpraGold Boss",
-      role: "CEO of EmpraGold Real Estate",
+      role: "CEO of Empragold Estate Realtors LTD",
       image: empraGoldBossImg
     },
     publishedAt: "July 24, 2026",
@@ -58,7 +58,7 @@ export const blogData = [
     category: "Neighborhood Spotlight",
     author: {
       name: "EmpraGold Boss",
-      role: "CEO of EmpraGold Real Estate",
+      role: "CEO of Empragold Estate Realtors LTD",
       image: empraGoldBossImg
     },
     publishedAt: "July 15, 2026",

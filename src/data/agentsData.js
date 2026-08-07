@@ -1,10 +1,10 @@
-import empraGoldBossImg from '../assets/images/empragold_boss_new.png';
+import empraGoldBossImg from '../assets/images/empragold_boss_avif.avif';
 
 export const agentsData = [
   {
     id: "agent-1",
     name: "EmpraGold Boss",
-    role: "CEO of EmpraGold Real Estate",
+    role: "CEO of Empragold Estate Realtors LTD",
     experience: "14+ Years Experience",
     phone: "+234 815 678 9757",
     email: "adediresesan@gmail.com",

@@ -1,6 +1,6 @@
 import alimoshoLandImg from "../assets/images/alimosho_brt_land_1786011122801.jpg";
 import lasuBungalowImg from "../assets/images/lasu_bungalow_ina_junction_1786022842517.jpg";
-import empraGoldBossImg from "../assets/images/empragold_boss_new.png";
+import empraGoldBossImg from "../assets/images/empragold_boss_avif.avif";
 
 export const propertiesData = [
   {
@@ -620,7 +620,7 @@ export const propertiesData = [
     agent: {
       id: "agent-1",
       name: "EmpraGold Boss",
-      title: "CEO of EmpraGold Real Estate",
+      title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
       image: empraGoldBossImg
@@ -664,7 +664,7 @@ export const propertiesData = [
     agent: {
       id: "agent-1",
       name: "EmpraGold Boss",
-      title: "CEO of EmpraGold Real Estate",
+      title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
       image: empraGoldBossImg
@@ -709,7 +709,7 @@ export const propertiesData = [
     agent: {
       id: "agent-1",
       name: "EmpraGold Boss",
-      title: "CEO of EmpraGold Real Estate",
+      title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
       image: empraGoldBossImg
@@ -753,7 +753,7 @@ export const propertiesData = [
     agent: {
       id: "agent-1",
       name: "EmpraGold Boss",
-      title: "CEO of EmpraGold Real Estate",
+      title: "CEO of Empragold Estate Realtors LTD",
       phone: "+234 815 678 9757",
       email: "adediresesan@gmail.com",
       image: empraGoldBossImg

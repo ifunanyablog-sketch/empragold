@@ -5,7 +5,7 @@ import { PropertyCard } from '../components/PropertyCard';
 import { PropertyMedia } from '../components/PropertyMedia';
 import { propertiesData, communitiesData } from '../data/propertiesData';
 import heroVillaBg from '../assets/images/hero_villa_background_1786026136278.jpg';
-import empraGoldBossImg from '../assets/images/empragold_boss_new.png';
+import empraGoldBossImg from '../assets/images/empragold_boss_avif.avif';
 import { 
   Search, 
   MapPin, 
@@ -51,7 +51,7 @@ export const Home = () => {
       />
 
       {/* Hero Header Section matching Image Reference Aesthetics in Website Green Theme */}
-      <section className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[88vh] flex flex-col justify-between">
+      <section className="relative pt-28 sm:pt-32 lg:pt-36 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[72vh] flex flex-col justify-between">
         {/* Full Screen Luxury Architectural Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
@@ -65,10 +65,10 @@ export const Home = () => {
         </div>
 
         {/* Content Container matching Image Reference Layout Grid */}
-        <div className="max-w-7xl mx-auto w-full relative z-10 flex-1 flex flex-col justify-between pt-2 sm:pt-6">
+        <div className="max-w-7xl mx-auto w-full relative z-10 flex-1 flex flex-col justify-between pt-1 sm:pt-3">
           
-          {/* Top Section: Structured Row with 80K Card (Left) & Giant Green "BOOK YOUR DREAM" (Right) */}
-          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+          {/* Top Section: Structured Row with 80K Card (Left) & Green "BOOK YOUR DREAM" (Right) */}
+          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
             
             {/* Top Left Floating Card: 80K+ Trusted Owners */}
             <motion.div 
@@ -77,29 +77,29 @@ export const Home = () => {
               transition={{ duration: 0.5 }}
               className="self-start"
             >
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/80 max-w-[220px] sm:max-w-[250px] transform hover:scale-[1.02] transition-transform">
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-3 sm:p-4 shadow-lg border border-white/80 max-w-[190px] sm:max-w-[220px] transform hover:scale-[1.02] transition-transform">
                 {/* Green Top Accent Line */}
-                <div className="w-10 h-1 bg-[#4db038] rounded-full mb-3" />
+                <div className="w-8 h-1 bg-[#4db038] rounded-full mb-2" />
                 
                 {/* Overlapping User Avatars */}
-                <div className="flex -space-x-2 overflow-hidden mb-2.5">
+                <div className="flex -space-x-2 overflow-hidden mb-2">
                   <img 
-                    className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover shadow-xs" 
+                    className="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white object-cover shadow-xs" 
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
                     alt="Property Owner 1" 
                   />
                   <img 
-                    className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-white object-cover shadow-xs" 
+                    className="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white object-cover shadow-xs" 
                     src={empraGoldBossImg} 
                     alt="EmpraGold Boss" 
                   />
                 </div>
 
                 {/* Counter Metric */}
-                <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                   80K+
                 </div>
-                <p className="text-xs text-slate-600 font-bold mt-0.5">
+                <p className="text-[11px] text-slate-600 font-bold mt-0.5 leading-tight">
                   Trusted by property owners
                 </p>
               </div>
@@ -112,7 +112,7 @@ export const Home = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="lg:text-right text-left"
             >
-              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[#4db038] uppercase leading-[0.92] drop-shadow-md select-none">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#4db038] uppercase leading-[0.94] drop-shadow-md select-none">
                 BOOK YOUR <br />
                 <span className="text-[#5cd645] drop-shadow-lg">DREAM</span>
               </h1>
@@ -120,7 +120,7 @@ export const Home = () => {
           </div>
 
           {/* Bottom Section: Perfectly Aligned Interactive Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 items-end my-6 sm:my-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 items-end my-4 sm:my-6">
             
             {/* Bottom-Left Card: Cutting Edge Tech Inside */}
             <motion.div 
@@ -129,30 +129,30 @@ export const Home = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="lg:col-span-5"
             >
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/80 max-w-xs transform hover:scale-[1.02] transition-transform">
-                <span className="text-xs sm:text-sm font-extrabold text-slate-900 block mb-2">
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-3.5 sm:p-4 shadow-lg border border-white/80 max-w-[220px] sm:max-w-[240px] transform hover:scale-[1.02] transition-transform">
+                <span className="text-xs font-extrabold text-slate-900 block mb-1.5">
                   Cutting edge tech inside
                 </span>
                 
                 {/* Tech Bar/Graph Graphic Box */}
-                <div className="bg-emerald-50/80 rounded-xl p-2.5 border border-emerald-100 mb-3 flex flex-col items-center justify-center">
-                  <div className="flex items-end gap-1.5 h-9 py-1">
-                    <div className="w-2 bg-[#4db038]/40 h-3 rounded-full" />
-                    <div className="w-2 bg-[#4db038] h-7 rounded-full" />
-                    <div className="w-2 bg-[#4db038]/60 h-5 rounded-full" />
-                    <div className="w-2 bg-[#338424] h-9 rounded-full" />
-                    <div className="w-2 bg-[#4db038]/50 h-4 rounded-full" />
+                <div className="bg-emerald-50/80 rounded-lg p-2 border border-emerald-100 mb-2 flex flex-col items-center justify-center">
+                  <div className="flex items-end gap-1.5 h-7 py-0.5">
+                    <div className="w-1.5 bg-[#4db038]/40 h-2.5 rounded-full" />
+                    <div className="w-1.5 bg-[#4db038] h-5 rounded-full" />
+                    <div className="w-1.5 bg-[#4db038]/60 h-4 rounded-full" />
+                    <div className="w-1.5 bg-[#338424] h-7 rounded-full" />
+                    <div className="w-1.5 bg-[#4db038]/50 h-3 rounded-full" />
                   </div>
-                  <span className="text-[10px] text-[#338424] font-mono tracking-widest block font-bold mt-1">
+                  <span className="text-[9px] text-[#338424] font-mono tracking-widest block font-bold mt-0.5">
                     - 300 1m -
                   </span>
                 </div>
 
                 <button 
                   onClick={() => navigate('/properties')}
-                  className="text-xs font-bold text-[#338424] flex items-center gap-1 hover:text-[#4db038] transition-colors cursor-pointer"
+                  className="text-[11px] font-bold text-[#338424] flex items-center gap-1 hover:text-[#4db038] transition-colors cursor-pointer"
                 >
-                  Check it now <ArrowUpRight className="w-3.5 h-3.5 text-[#4db038]" />
+                  Check it now <ArrowUpRight className="w-3 h-3 text-[#4db038]" />
                 </button>
               </div>
             </motion.div>
@@ -162,24 +162,24 @@ export const Home = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="lg:col-span-7 sm:justify-self-end w-full max-w-sm"
+              className="lg:col-span-7 sm:justify-self-end w-full max-w-xs sm:max-w-sm"
             >
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/80 w-full transform hover:scale-[1.02] transition-transform">
-                <div className="flex items-center justify-between mb-2.5">
-                  <span className="text-sm font-extrabold text-slate-900">
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-3.5 sm:p-4 shadow-lg border border-white/80 w-full transform hover:scale-[1.02] transition-transform">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs sm:text-sm font-extrabold text-slate-900">
                     Step into comfort
                   </span>
                   <button 
                     onClick={() => navigate('/properties')}
-                    className="w-8 h-8 rounded-full bg-[#4db038] hover:bg-[#338424] text-white flex items-center justify-center shadow-md hover:scale-110 transition-all cursor-pointer"
+                    className="w-7 h-7 rounded-full bg-[#4db038] hover:bg-[#338424] text-white flex items-center justify-center shadow-xs hover:scale-110 transition-all cursor-pointer"
                     title="Explore Interiors"
                   >
-                    <Play className="w-3.5 h-3.5 fill-white ml-0.5" />
+                    <Play className="w-3 h-3 fill-white ml-0.5" />
                   </button>
                 </div>
                 
                 {/* Interior Bedroom Photo */}
-                <div className="rounded-xl overflow-hidden h-32 sm:h-36 shadow-inner relative group">
+                <div className="rounded-lg overflow-hidden h-24 sm:h-28 shadow-inner relative group">
                   <img 
                     src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" 
                     alt="Luxury Bedroom Comfort" 
@@ -207,9 +207,9 @@ export const Home = () => {
                   navigate('/properties');
                 }
               }}
-              className="bg-[#4db038] hover:bg-[#338424] text-white font-extrabold text-sm uppercase tracking-wider px-10 sm:px-14 py-3.5 rounded-xl shadow-xl flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer border border-emerald-300/40"
+              className="bg-[#4db038] hover:bg-[#338424] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 sm:px-10 py-2.5 sm:py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer border border-emerald-300/40"
             >
-              EXPLORE <ArrowUpRight className="w-4 h-4 text-white stroke-[3]" />
+              EXPLORE <ArrowUpRight className="w-3.5 h-3.5 text-white stroke-[3]" />
             </button>
           </motion.div>
 
