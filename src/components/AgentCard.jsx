@@ -23,7 +23,6 @@ export const AgentCard = ({ agent }) => {
             alt={agent.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80" />
 
           {/* Experience Badge */}
           <div className="absolute top-4 left-4 bg-white/95 border border-slate-200 text-slate-900 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md shadow-2xs">
