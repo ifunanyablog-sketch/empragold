@@ -116,7 +116,12 @@ export const Blog = () => {
 
               <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                 <div className="flex items-center gap-3">
-                  <img src={featuredArticle.author.image} alt={featuredArticle.author.name} className="w-10 h-10 rounded-full object-cover border border-slate-300" />
+                  <img 
+                    src={featuredArticle.author.image || "/adedire_sesan.jpg"} 
+                    alt={featuredArticle.author.name} 
+                    className="w-10 h-10 rounded-full object-cover border border-slate-300" 
+                    onError={(e) => { e.currentTarget.src = "/adedire_sesan.jpg"; }}
+                  />
                   <div>
                     <strong className="text-slate-900 text-xs block">{featuredArticle.author.name}</strong>
                     <span className="text-[10px] text-slate-500 block">{featuredArticle.author.role}</span>

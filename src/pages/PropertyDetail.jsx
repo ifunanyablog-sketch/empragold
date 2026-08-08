@@ -341,9 +341,10 @@ export const PropertyDetail = () => {
 
               <div className="flex items-center gap-4 mb-5">
                 <img
-                  src={property.agent?.image || 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'}
+                  src={property.agent?.image || "/adedire_sesan.jpg"}
                   alt={property.agent?.name}
                   className="w-16 h-16 rounded-2xl object-cover border-2 border-slate-200"
+                  onError={(e) => { e.currentTarget.src = "/adedire_sesan.jpg"; }}
                 />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900">{property.agent?.name}</h4>

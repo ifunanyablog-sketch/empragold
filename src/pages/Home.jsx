@@ -5,7 +5,7 @@ import { PropertyCard } from '../components/PropertyCard';
 import { PropertyMedia } from '../components/PropertyMedia';
 import { propertiesData, communitiesData } from '../data/propertiesData';
 import heroVillaBg from '../assets/images/hero_villa_background_1786026136278.jpg';
-import adedireSesanImg from '../assets/images/adedire_sesan.png';
+import adedireSesanImg from '../assets/images/adedire_sesan.jpg';
 import { 
   Search, 
   MapPin, 
@@ -90,8 +90,9 @@ export const Home = () => {
                   />
                   <img 
                     className="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white object-cover shadow-xs" 
-                    src={adedireSesanImg} 
+                    src={adedireSesanImg || "/adedire_sesan.jpg"} 
                     alt="Adedire Sesan" 
+                    onError={(e) => { e.currentTarget.src = "/adedire_sesan.jpg"; }}
                   />
                 </div>
 

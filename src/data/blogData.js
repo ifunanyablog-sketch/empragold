@@ -1,4 +1,4 @@
-import adedireSesanImg from '../assets/images/adedire_sesan.png';
+import adedireSesanImg from '../assets/images/adedire_sesan.jpg';
 
 export const blogData = [
   {

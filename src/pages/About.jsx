@@ -124,7 +124,12 @@ export const About = () => {
             <div className="max-w-md w-full">
               {agentsData.map((agent) => (
                 <div key={agent.id} className="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-md">
-                  <img src={agent.image} alt={agent.name} className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-3 border-[#4db038] shadow-sm" />
+                  <img 
+                    src={agent.image || "/adedire_sesan.jpg"} 
+                    alt={agent.name} 
+                    className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-4 border-[#4db038] shadow-sm"
+                    onError={(e) => { e.currentTarget.src = "/adedire_sesan.jpg"; }}
+                  />
                   <h3 className="text-xl font-bold text-slate-900">{agent.name}</h3>
                   <span className="text-xs text-[#338424] uppercase font-bold block mt-1">{agent.role}</span>
                   <p className="text-sm text-slate-600 mt-3 leading-relaxed">{agent.bio}</p>

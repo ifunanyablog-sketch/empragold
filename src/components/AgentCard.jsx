@@ -19,9 +19,10 @@ export const AgentCard = ({ agent }) => {
         {/* Agent Photo */}
         <div className="relative h-72 overflow-hidden bg-slate-100">
           <img
-            src={agent.image}
+            src={agent.image || "/adedire_sesan.jpg"}
             alt={agent.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            onError={(e) => { e.currentTarget.src = "/adedire_sesan.jpg"; }}
           />
 
           {/* Experience Badge */}

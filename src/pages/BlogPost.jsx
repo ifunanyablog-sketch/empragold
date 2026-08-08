@@ -50,7 +50,12 @@ export const BlogPost = () => {
           {/* Author Bar */}
           <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm">
             <div className="flex items-center gap-3">
-              <img src={post.author.image} alt={post.author.name} className="w-12 h-12 rounded-full object-cover border border-slate-300" />
+              <img 
+                src={post.author.image || "/adedire_sesan.jpg"} 
+                alt={post.author.name} 
+                className="w-12 h-12 rounded-full object-cover border border-slate-300" 
+                onError={(e) => { e.currentTarget.src = "/adedire_sesan.jpg"; }}
+              />
               <div>
                 <strong className="text-slate-900 text-sm block font-semibold">{post.author.name}</strong>
                 <span className="text-xs text-slate-500 block">{post.author.role}</span>
